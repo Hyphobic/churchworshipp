@@ -1,0 +1,99 @@
+"use strict";
+/* Local, offline-capable worship set and song-chain builder.
+   Saved snapshots preserve exact Spotify versions even if tracks leave the playlist. */
+(()=>{
+const STORE='worship-chords-chains-v1';
+const byId=id=>document.getElementById(id);
+const libraryPanel=byId('libraryPanel'),chainPanel=byId('chainsPanel');
+const tabs=[byId('libraryTab'),byId('chainsTab')];
+const escChain=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const normalized=x=>String(x||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+const sections=['Full song','Intro','Verse','Pre-chorus','Chorus','Bridge','Instrumental','Vamp / repeat','Outro','Medley portion','Custom section'];
+const transitions=['Blend / no stop','Vamp into next','Count in next','Hard stop','Key change','Tempo change','Spoken cue','Instrumental segue'];
+const keys=['','C','C# / Db','D','Eb / D#','E','F','F# / Gb','G','Ab / G#','A','Bb / A#','B','Cm','C#m','Dm','Ebm','Em','Fm','F#m','Gm','G#m','Am','Bbm','Bm'];
+let collections=[],active=null,search='',stageIndex=0,stageOpen=false;
+const safeJson=()=>{try{const x=JSON.parse(localStorage.getItem(STORE)||'[]');return Array.isArray(x)?x:[]}catch(_){return []}};
+function newId(){return (crypto.randomUUID?.()||('id-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2)))}
+function save(){try{localStorage.setItem(STORE,JSON.stringify(collections))}catch(e){announce('Device storage unavailable. Export a backup to keep changes.')}byId('chainSaved').textContent='Saved on this device';updateCounts()}
+function announce(message){const t=byId('chainToast');t.textContent=message;clearTimeout(announce.timer);announce.timer=setTimeout(()=>t.textContent='',3200)}
+function current(){return collections.find(x=>x.id===active)}
+function switchTab(which){const chain=which==='chains';chainPanel.hidden=!chain;libraryPanel.hidden=chain;tabs.forEach((el,i)=>{const v=Number(chain)===i;el.classList.toggle('active',v);el.setAttribute('aria-selected',String(v))});if(chain){renderSidebar();renderEditor();window.scrollTo?.({top:0,behavior:'smooth'})}}
+function updateCounts(){byId('chainCount').textContent=String(collections.length);byId('chainNavCount').textContent=String(collections.length)}
+function snapshot(t){return {key:t.key,spotify:t.spotify,title:t.title,artist:t.artist,album:t.album,length:t.length}}
+function createChain(label='New worship chain'){const c={id:newId(),name:label,date:'',notes:'',items:[],createdAt:Date.now(),updatedAt:Date.now()};collections.unshift(c);active=c.id;save();switchTab('chains');byId('chainName').focus();byId('chainName').select();return c}
+function renderSidebar(){const el=byId('chainList');if(!collections.length){el.innerHTML='<div class="chain-none">Your chains appear here</div>';updateCounts();return}el.innerHTML=collections.map(c=>`<button type="button" class="chain-tile ${c.id===active?'selected':''}" data-open-chain="${escChain(c.id)}" aria-current="${c.id===active?'true':'false'}"><strong>${escChain(c.name||'Untitled chain')}</strong><span>${c.items.length} ${c.items.length===1?'section':'sections'}${c.date?' · '+escChain(c.date):''}</span></button>`).join('');updateCounts()}
+function track(item){return tracks.find(t=>t.key===item.trackKey)||item.snapshot}
+function asSeconds(v){const match=String(v||'').match(/^(\d+):(\d\d)$/);return match?Number(match[1])*60+Number(match[2]):0}
+function duration(seconds){const m=Math.floor(seconds/60),h=Math.floor(m/60);return h?`${h}:${String(m%60).padStart(2,'0')}:${String(seconds%60).padStart(2,'0')}`:`${m}:${String(seconds%60).padStart(2,'0')}`}
+function option(values,value){return values.map(v=>`<option value="${escChain(v)}"${String(value)===String(v)?' selected':''}>${escChain(v||'Not set')}</option>`).join('')}
+function relatedKeys(a,b){if(!a||!b)return 'Set both keys to plan the musical transition.';
+ if(a===b)return 'Same selected key. Test whether the melodies and tempos connect smoothly.';
+ const relative={C:'Am',G:'Em',D:'Bm',A:'F#m',E:'C#m',B:'G#m','F# / Gb':'Ebm','C# / Db':'Bbm','Ab / G#':'Fm','Eb / D#':'Cm','Bb / A#':'Gm',F:'Dm'};
+ if(relative[a]===b||relative[b]===a)return 'Relative major/minor keys. Try a shared chord or instrumental vamp; verify by ear.';
+ return `Modulation: ${a} → ${b}. Rehearse the exact pivot, chord cue or hard stop.`;
+}
+function renderSteps(){const c=current();if(!c)return;const el=byId('chainSteps');if(!c.items.length){el.innerHTML='<div class="chain-none">No songs yet. Search your Spotify playlist below and tap Add.</div>';byId('chainTrackCount').textContent='0 sections';byId('chainReferenceDuration').textContent='0:00 recording references';return}
+ let seconds=0;
+ el.innerHTML=c.items.map((it,i)=>{const src=track(it),next=c.items[i+1],ns=next&&track(next);seconds+=asSeconds(src.length);
+ const hint=next?relatedKeys(it.key, next.key):'';
+ const trackGone=!tracks.some(t=>t.key===it.trackKey);
+ return `<article class="chain-step" data-step-id="${escChain(it.id)}"><div class="chain-stephead"><span class="chain-position">${i+1}</span><div class="chain-trackinfo"><div class="chain-tracktitle">${escChain(src.title)} ${trackGone?'<span class="missing">(not in current playlist)</span>':''}</div><div class="chain-trackdesc">${escChain(src.artist)} · ${escChain(src.album)} · ${escChain(src.length)}</div></div><button type="button" class="chain-remove" data-remove="${escChain(it.id)}" aria-label="Remove ${escChain(src.title)}">Remove</button></div>
+ <div class="chain-stepcontrols"><button type="button" class="chain-iconbtn" data-up="${escChain(it.id)}" ${i===0?'disabled':''} aria-label="Move up">↑ Up</button><button type="button" class="chain-iconbtn" data-down="${escChain(it.id)}" ${i===c.items.length-1?'disabled':''} aria-label="Move down">↓ Down</button><button type="button" class="chain-iconbtn" data-duplicate="${escChain(it.id)}">Duplicate section</button><a href="${escChain(src.spotify)}" class="btn" target="_blank" rel="noopener noreferrer">Spotify ↗</a><button type="button" class="chain-iconbtn" data-customchart="${escChain(it.trackKey)}">My chords</button>${tracks.find(x=>x.key===it.trackKey)?.lesson?`<button type="button" class="chain-iconbtn" data-chord="${escChain(it.trackKey)}">Chords</button>`:''}</div>
+ <div class="chain-stepgrid">
+ <label class="wide">Part to play<select class="chain-input" data-edit="segment" data-id="${escChain(it.id)}">${option(sections,it.segment)}</select></label>
+ <label>Key<select class="chain-input" data-edit="key" data-id="${escChain(it.id)}">${option(keys,it.key)}</select></label>
+ <label>Tempo (BPM)<input class="chain-input" type="number" min="40" max="250" data-edit="bpm" data-id="${escChain(it.id)}" value="${escChain(it.bpm)}" placeholder="Optional" inputmode="numeric"></label>
+ <label class="wide">Exit into next song<select class="chain-input" data-edit="transition" data-id="${escChain(it.id)}">${option(transitions,it.transition)}</select></label>
+ <label class="wide">Section / rehearsal notes<textarea class="chain-input" data-edit="notes" data-id="${escChain(it.id)}" rows="2" maxlength="1000" placeholder="e.g. Repeat chorus 2x, finish on G, drummer counts 1-2-3-4…">${escChain(it.notes)}</textarea></label></div>
+ ${next?`<div class="chain-transition"><strong>Transition ${i+1} → ${i+2}:</strong> ${escChain(it.transition)} · ${escChain(src.title)} → ${escChain(ns.title)}${it.notes?' · cue in notes':''}</div><div class="chain-suggestion">${escChain(hint)}${it.bpm&&next.bpm&&Math.abs(Number(it.bpm)-Number(next.bpm))>=15?' Tempos are noticeably different; plan a clear count-in.':''}</div>`:'<div class="chain-transition"><strong>End of chain.</strong> Choose an outro or closing cue.</div>'}</article>`}).join('');
+ byId('chainTrackCount').textContent=`${c.items.length} ${c.items.length===1?'section':'sections'}`;
+ byId('chainReferenceDuration').textContent=`${duration(seconds)} if full recordings played`;
+}
+function renderEditor(){const c=current();byId('chainEmpty').hidden=!!c;byId('chainEditor').hidden=!c;if(!c)return;
+ byId('chainName').value=c.name;byId('chainDate').value=c.date||'';byId('chainNotes').value=c.notes||'';renderSteps();renderPicker();}
+function renderPicker(){const c=current();if(!c)return;const q=normalized(byId('chainSongSearch').value).trim();let results=tracks.filter(t=>normalized([t.title,t.artist,t.album,t.n].join(' ')).includes(q));const total=results.length;results=results.slice(0,32);
+ byId('chainSearchCount').textContent=q?`${total} matching recording${total===1?'':'s'}${total>32?' · showing first 32':''}`:`${total} recordings · showing first 32 · type to narrow down`;
+ byId('chainPickList').innerHTML=results.map(t=>`<div class="chain-pick"><div class="chain-pick-info"><div class="chain-pick-title">${escChain(t.title)}</div><div class="chain-pick-details">${escChain(t.artist)} · ${escChain(t.album)}${t.medleyPage||t.isMedley?' · Medley':''}</div></div><button type="button" class="btn primary" data-pick-key="${escChain(t.key)}">+ Add</button></div>`).join('')||'<div class="chain-none">No matching recording. Try another search.</div>';
+}
+function addTrack(key){let c=current();if(!c)c=createChain('New worship chain');const t=tracks.find(x=>x.key===key);if(!t){announce('That recording is no longer in the current Spotify library.');return}
+ c.items.push({id:newId(),trackKey:key,snapshot:snapshot(t),segment:'Full song',key:'',bpm:'',transition:'Blend / no stop',notes:''});c.updatedAt=Date.now();save();switchTab('chains');announce(`Added ${t.title}`)}
+function addFromLibrary(key){addTrack(key);byId('chainSongSearch').value=''}
+function updateField(id,field,val){const c=current(),it=c?.items.find(x=>x.id===id);if(!it)return;if(field==='bpm'&&val&&(!/^\d{1,3}$/.test(val)||Number(val)<40||Number(val)>250))return;it[field]=val;c.updatedAt=Date.now();save();if(['key','bpm','transition','segment'].includes(field))renderSteps()}
+function move(id,dir){const c=current(),i=c?.items.findIndex(x=>x.id===id);if(i==null||i<0||i+dir<0||i+dir>=c.items.length)return;[c.items[i],c.items[i+dir]]=[c.items[i+dir],c.items[i]];save();renderSteps()}
+function remove(id){const c=current();if(!c)return;c.items=c.items.filter(x=>x.id!==id);save();renderSteps()}
+function duplicateItem(id){const c=current(),i=c?.items.findIndex(x=>x.id===id);if(i<0)return;c.items.splice(i+1,0,{...c.items[i],snapshot:{...c.items[i].snapshot},id:newId()});save();renderSteps()}
+function planText(c){return [`WORSHIP CHORDS — ${c.name}`,c.date?`Service: ${c.date}`:'',c.notes?`Team notes: ${c.notes}`:'', '',...c.items.flatMap((s,i)=>{const t=track(s);return [`${i+1}. ${t.title} — ${t.artist}`,`   Recording: ${t.album} (${t.length})`,`   Section: ${s.segment}${s.key?'  |  Key: '+s.key:''}${s.bpm?'  |  Tempo: '+s.bpm+' BPM':''}`,s.notes?'   Cue: '+s.notes:'',i<c.items.length-1?'   → To next: '+s.transition:'   End of chain',`   ${t.spotify}`,'']})].filter(x=>x!=='').join('\n')}
+function blobSave(text,file,mime){const url=URL.createObjectURL(new Blob([text],{type:mime})),a=document.createElement('a');a.href=url;a.download=file;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function filename(c){return(c?.name||'worship-chain').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9-]+/gi,'-').replace(/^-|-$/g,'').slice(0,60)||'chain'}
+function showStage(index=0){const c=current();if(!c||!c.items.length){announce('Add at least one song first.');return}stageIndex=Math.max(0,Math.min(index,c.items.length-1));stageOpen=true;const stage=byId('chainStage');stage.hidden=false;document.body.classList.add('lock');renderStage()}
+function hideStage(){byId('chainStage').hidden=true;document.body.classList.remove('lock');stageOpen=false}
+function renderStage(){const c=current();if(!c||!stageOpen)return;const it=c.items[stageIndex],t=track(it),next=c.items[stageIndex+1];byId('stageCounter').textContent=`${stageIndex+1} / ${c.items.length}`;byId('stageTitle').textContent=c.name;byId('stageTrack').textContent=t.title;byId('stageArtist').textContent=`${t.artist} · ${t.album}`;byId('stageKey').innerHTML=`<span>${escChain(it.segment)}</span>${it.key?`<span>Key ${escChain(it.key)}</span>`:''}${it.bpm?`<span>${escChain(it.bpm)} BPM</span>`:''}`;byId('stageCue').textContent=it.notes||'No cue notes. Set a chord, instrument or vocal entrance in the chain editor.';byId('stageNext').textContent=next?`Next: ${track(next).title} · ${it.transition} · ${relatedKeys(it.key,next.key)}`:'End of chain';byId('stageSpotify').href=t.spotify;byId('stagePrev').disabled=stageIndex===0;byId('stageNextButton').disabled=stageIndex===c.items.length-1;}
+function setUp(){collections=safeJson().filter(c=>c&&typeof c.id==='string'&&Array.isArray(c.items)).map(c=>({...c,name:String(c.name||'Untitled chain'),items:c.items.filter(i=>i?.id&&i.snapshot)}));active=collections[0]?.id||null;updateCounts();
+ tabs[0].addEventListener('click',()=>switchTab('library'));tabs[1].addEventListener('click',()=>switchTab('chains'));
+ for(const id of ['chainNew','chainEmptyNew'])byId(id).addEventListener('click',()=>createChain());
+ byId('chainList').addEventListener('click',e=>{const b=e.target.closest('[data-open-chain]');if(b){active=b.dataset.openChain;renderSidebar();renderEditor()}});
+ byId('chainName').addEventListener('input',e=>{const c=current();if(!c)return;c.name=e.target.value;save();renderSidebar();});
+ byId('chainDate').addEventListener('change',e=>{const c=current();if(!c)return;c.date=e.target.value;save();renderSidebar()});
+ byId('chainNotes').addEventListener('input',e=>{const c=current();if(!c)return;c.notes=e.target.value;save()});
+ byId('chainSongSearch').addEventListener('input',renderPicker);
+ byId('chainPickList').addEventListener('click',e=>{const el=e.target.closest('[data-pick-key]');if(el)addTrack(el.dataset.pickKey)});
+ byId('chainSteps').addEventListener('click',e=>{const btn=e.target.closest('button');if(!btn)return;let id;if((id=btn.dataset.up))return move(id,-1);if((id=btn.dataset.down))return move(id,1);if((id=btn.dataset.remove))return remove(id);if((id=btn.dataset.duplicate))return duplicateItem(id);if((id=btn.dataset.customchart))return window.WorshipCharts?.open(id);if((id=btn.dataset.chord)){const t=tracks.find(x=>x.key===id);if(t?.lesson?.page)openPage(t.lesson.page,t.title)}});
+ byId('chainSteps').addEventListener('change',e=>{const el=e.target.closest('[data-edit]');if(el)updateField(el.dataset.id,el.dataset.edit,el.value)});
+ byId('chainSteps').addEventListener('input',e=>{const el=e.target.closest('[data-edit]');if(el&&el.dataset.edit==='notes'){const c=current(),it=c?.items.find(x=>x.id===el.dataset.id);if(it){it.notes=el.value;save()}}});
+ byId('chainDelete').addEventListener('click',()=>{const c=current();if(!c||!confirm(`Delete "${c.name}"? This cannot be undone unless you exported a backup.`))return;collections=collections.filter(x=>x.id!==active);active=collections[0]?.id||null;save();renderSidebar();renderEditor();announce('Chain deleted')});
+ byId('chainDuplicate').addEventListener('click',()=>{const c=current();if(!c)return;const next=JSON.parse(JSON.stringify(c));next.id=newId();next.name=c.name+' (copy)';next.items=next.items.map(x=>({...x,id:newId()}));collections.unshift(next);active=next.id;save();renderSidebar();renderEditor();announce('Chain duplicated')});
+ byId('chainExport').addEventListener('click',()=>{const c=current();if(c)blobSave(planText(c),filename(c)+'.txt','text/plain;charset=utf-8')});
+ byId('chainBackup').addEventListener('click',()=>blobSave(JSON.stringify({app:'Worship Chords',version:1,chains:collections},null,2),'worship-chains-backup.json','application/json'));
+ byId('chainImport').addEventListener('change',async e=>{const f=e.target.files?.[0];if(!f)return;try{const d=JSON.parse(await f.text());if(!Array.isArray(d?.chains)||d.app!=='Worship Chords')throw Error('File is not a Worship Chords backup.');const incoming=d.chains.filter(x=>typeof x.id==='string'&&Array.isArray(x.items)&&x.items.every(it=>it?.snapshot?.title));if(!incoming.length)throw Error('No usable chains found.');if(!confirm(`Import ${incoming.length} chains? Existing chains will stay.`))return;const occupied=new Set(collections.map(x=>x.id));for(const item of incoming){const c=JSON.parse(JSON.stringify(item));if(occupied.has(c.id))c.id=newId();occupied.add(c.id);c.items=c.items.map(x=>({...x,id:newId()}));collections.push(c)}active=incoming[0].id&&!collections.slice(0,-incoming.length).some(x=>x.id===incoming[0].id)?incoming[0].id:collections.at(-incoming.length).id;save();renderSidebar();renderEditor();announce(`${incoming.length} chains imported`)}catch(err){announce('Import failed: '+err.message)}finally{e.target.value=''}});
+ byId('chainCopy').addEventListener('click',async()=>{const c=current();if(!c)return;try{await navigator.clipboard.writeText(planText(c));announce('Rehearsal plan copied')}catch(_){blobSave(planText(c),filename(c)+'.txt','text/plain;charset=utf-8');announce('Downloaded a text plan instead')}});
+ byId('chainPrint').addEventListener('click',()=>window.print());
+ byId('chainRehearse').addEventListener('click',()=>showStage());
+ byId('stageChords').addEventListener('click',()=>{const c=current(),item=c?.items[stageIndex];if(item)window.WorshipCharts?.open(item.trackKey)});byId('stageExit').addEventListener('click',hideStage);byId('stagePrev').addEventListener('click',()=>{stageIndex--;renderStage()});byId('stageNextButton').addEventListener('click',()=>{stageIndex++;renderStage()});
+ document.addEventListener('keydown',e=>{if(!stageOpen)return;if(e.key==='Escape')hideStage();if(['INPUT','TEXTAREA'].includes(document.activeElement?.tagName))return;if(e.key==='ArrowRight'&&stageIndex<current().items.length-1){stageIndex++;renderStage()}if(e.key==='ArrowLeft'&&stageIndex>0){stageIndex--;renderStage()}});
+ document.addEventListener('worship:library-updated',()=>{if(!chainPanel.hidden)renderPicker()});
+ renderSidebar();renderEditor();
+}
+window.WorshipChains={addFromLibrary,createChain,show:()=>switchTab('chains'),getChains:()=>collections,stage:showStage};
+document.body.insertAdjacentHTML('beforeend',`<div id="chainStage" class="chain-stage" role="dialog" aria-modal="true" aria-label="Stage mode" hidden><div class="chain-stage-head"><div><div class="eyebrow">Live worship · Stage mode</div><div id="stageCounter" class="chain-stage-progress"></div></div><button class="btn" type="button" id="stageExit">✕ Exit</button></div><h2 id="stageTitle"></h2><div id="stageTrack" class="chain-stage-track"></div><div id="stageArtist" class="chain-stage-info"></div><div class="chain-stage-key" id="stageKey"></div><p style="color:#d6b47b;font-weight:700;margin-bottom:9px">Cue / instructions</p><div class="chain-stage-cue" id="stageCue"></div><div class="chain-stage-footer"><button id="stagePrev" type="button" class="btn">← Previous</button><a id="stageSpotify" target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/">Spotify ↗</a><button type="button" class="btn" id="stageChords">♪ Chords</button><button id="stageNextButton" type="button" class="btn primary">Next →</button></div><div id="stageNext" class="chain-stage-next"></div></div>`);
+setUp();
+})();
