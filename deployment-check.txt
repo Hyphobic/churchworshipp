@@ -1,3 +1,4 @@
-Worship Chords publishing test
-This harmless file confirms GitHub changes can be published through ChatGPT.
-Date: 2026-10-20
+Worship Chords automatic deployment check
+GitHub publishing confirmed.
+New push test created October 20, 2026 after Netlify configuration update.
+If you can view this text on your Netlify URL, automatic deployment is working.
