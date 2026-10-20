@@ -73,5 +73,16 @@ $('vBackup').onclick=()=>{const content=JSON.stringify({app:'Worship Chords Veri
 $('vImport').addEventListener('change',async e=>{const f=e.target.files?.[0];if(!f)return;try{const data=JSON.parse(await f.text());if(data.app!=='Worship Chords Verification'||data.version!==1||!data.reviews||typeof data.reviews!=='object'||Array.isArray(data.reviews))throw Error('Not a Worship Chords review backup');let n=0;for(const [k,v] of Object.entries(data.reviews)){if(!/^[a-zA-Z0-9_-]{8,80}#[0-9]{1,5}$/.test(k)||!v||typeof v!=='object')continue;const clean={status:['approved','verified'].includes(v.status)?v.status:'',declined:!!v.declined,url:String(v.url||'').slice(0,1200),site:String(v.site||'').slice(0,100),notes:String(v.notes||'').slice(0,4000),updated:Date.now()};if(clean.url&&!/^https:\/\//.test(clean.url))clean.url='';reviewData[k]=clean;n++;}save();render();alert(n+' review records imported. Your charts are stored in a separate backup.')}catch(err){alert('Import failed: '+err.message)}finally{e.target.value=''}});
 dialog.addEventListener('click',e=>{if(e.target===dialog)close()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!dialog.hidden)close()});
 window.WorshipVerification={badge,cardAction,matches,sort,count,state,candidates,open,reviewData};
+// Display label for the Worship Chords 1.1 test release.
+(function setDisplayVolume() {
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    if (/^\s*(?:Volume\s+0?2)\s*[·•]\s*Worship\s*$/i.test(node.nodeValue || "")) {
+      node.nodeValue = node.nodeValue.replace(/Volume\s+0?2/i, "Volume 1.1");
+      break;
+    }
+  }
+})();
 render();
 })();
