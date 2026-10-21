@@ -1,0 +1,1864 @@
+{
+  "title": "Worship Chords — LaCuerda source discovery audit",
+  "scannedOn": "2026-10-21",
+  "method": "Published LaCuerda artist/song chord pages located through public web research. Song-level source matches, not verified Spotify performance or a comprehensive proof of no chart.",
+  "originalPlaylistCount": 204,
+  "additionalSpotifyTracksObserved": 2,
+  "sourceCandidatesAdded": 123,
+  "existingCandidatesUpdated": 0,
+  "matchedOriginal": 120,
+  "partialOriginal": 2,
+  "unlocatedOriginal": 82,
+  "recordings": [
+    {
+      "n": 1,
+      "title": "Victoria",
+      "artist": "Abel Brito",
+      "album": "Es Hora de Adorarle",
+      "spotifyTrackId": "7dfkOys2ycCJcqHHLbcKMt",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 2,
+      "title": "Entonces La Iglesia Se Alegrara en La Danza",
+      "artist": "Alabanzas Cristianas Ebenezer",
+      "album": "Alabanza y Danza",
+      "spotifyTrackId": "3YXYBATD78SlSo0OtB4LkR",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 3,
+      "title": "Las Riquezas y Gloria Proceden Ti",
+      "artist": "Alabanzas Cristianas Ebenezer",
+      "album": "Alabanza y Danza",
+      "spotifyTrackId": "3GfRe2Ftsm33pv53c5dLt0",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/ebenezer/las_riquezas_y_la_gloria.shtml"
+    },
+    {
+      "n": 4,
+      "title": "Yo Hare Una Fiesta",
+      "artist": "Alabanzas Cristianas Ebenezer",
+      "album": "Alabanza y Danza",
+      "spotifyTrackId": "7bqsFRPxoSj4hq1NaKW74n",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/ebenezer/yo_hare_una_fiesta.shtml"
+    },
+    {
+      "n": 5,
+      "title": "Cantos de Liberacion",
+      "artist": "Alabanzas Cristianas Ebenezer",
+      "album": "Alabanza y Danza",
+      "spotifyTrackId": "58fzS1NjESVHZvfMt6V0cx",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/ebenezer/cantos_de_liberacion.shtml"
+    },
+    {
+      "n": 6,
+      "title": "El Preparara La Mesa Delante de Mis Enemigos",
+      "artist": "Alabanzas Cristianas Ebenezer",
+      "album": "Alabanza y Danza",
+      "spotifyTrackId": "4Igx0LaF7XX0brk3bzWouy",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/ebenezer/la_mesa.shtml"
+    },
+    {
+      "n": 7,
+      "title": "Yo Tengo Gozo Tengo Alegria",
+      "artist": "Alabanzas Cristianas Ebenezer",
+      "album": "Alabanza y Danza",
+      "spotifyTrackId": "5UVXUFiBm9X1099Wjjsn7Q",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/ebenezer/yo_tengo_gozo_tengo_alegria.shtml"
+    },
+    {
+      "n": 8,
+      "title": "Heme Aquí",
+      "artist": "Alabanzas Cristianas Ebenezer",
+      "album": "Cantos Cristianos",
+      "spotifyTrackId": "1azbdKkpkuOQ7oprcail1P",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/ebenezer/heme_aqui.shtml"
+    },
+    {
+      "n": 9,
+      "title": "Ante el Rey",
+      "artist": "Alabanzas Cristianas Ebenezer",
+      "album": "Cantos Cristianos",
+      "spotifyTrackId": "0cbatQmfIbu2sogEJ9ASKg",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/ebenezer/ante_el_rey.shtml"
+    },
+    {
+      "n": 10,
+      "title": "Los Carros De Faraón (Popurri)",
+      "artist": "Alabanza Vida Nueva",
+      "album": "Sucot",
+      "spotifyTrackId": "6o2XvvgBlqh8jM6sCDUZGL",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 11,
+      "title": "El Maestro de Galilea",
+      "artist": "Alex Rodriguez",
+      "album": "Sin Fronteras",
+      "spotifyTrackId": "6zLxr6n6tFeqmh2uNmBGGd",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 12,
+      "title": "Merecedor de Alabanza",
+      "artist": "Alex Rodriguez",
+      "album": "Sin Fronteras",
+      "spotifyTrackId": "6x8I8rtoNFAvj70zdvtCQi",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 13,
+      "title": "La Sombra de Pedro",
+      "artist": "Angel Rocha Hijo del Rey",
+      "album": "Guitarras Para Cristo",
+      "spotifyTrackId": "2yEEFdNhgLxvmtRzWFeTmk",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 14,
+      "title": "El Es el Poderoso",
+      "artist": "Angel Rocha Hijo del Rey",
+      "album": "Guitarras Y Acordeones",
+      "spotifyTrackId": "6STwxEyRXJTk6l3Wxhs7SF",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 15,
+      "title": "Ven Espíritu Santo",
+      "artist": "Barak",
+      "album": "Generación Sedienta",
+      "spotifyTrackId": "5Zp3GgOitUTntY4l3iXctD",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 16,
+      "title": "Yo Quiero Más",
+      "artist": "Billy Bunster",
+      "album": "Levantate",
+      "spotifyTrackId": "1yWMu5oyIbiV6VnwwTC8ma",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 17,
+      "title": "Fuego",
+      "artist": "Billy Bunster",
+      "album": "Levantate",
+      "spotifyTrackId": "3NlfXlQdsoJIAufkIMfDz8",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/billy_bunster/fuego.shtml"
+    },
+    {
+      "n": 18,
+      "title": "Me Gozaré",
+      "artist": "Billy Bunster",
+      "album": "Levantate",
+      "spotifyTrackId": "3TI7VfaJhFvqovoce7mAB3",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 19,
+      "title": "Vuelvo A Mi Hogar",
+      "artist": "Billy Bunster",
+      "album": "Unidos",
+      "spotifyTrackId": "1RweDj5X59OnNhgV5FTaxo",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/billy_bunster/vuelvo_a_mi_hogar.shtml"
+    },
+    {
+      "n": 20,
+      "title": "Voy A Perder La Compostura",
+      "artist": "Billy Bunster",
+      "album": "Voy a Perder la Compostura",
+      "spotifyTrackId": "5VeWMGosLf2eTKzED9Fnvb",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/billy_bunster/perder_la_compostura.shtml"
+    },
+    {
+      "n": 21,
+      "title": "Llename (feat. Roberto Orellana)",
+      "artist": "Blest / Roberto Orellana",
+      "album": "En El Lugar Secreto",
+      "spotifyTrackId": "7Gm6i5qqYLfHH8JEW2pUIn",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 22,
+      "title": "Mix Me Gozaré (En Vivo)",
+      "artist": "Ccint Music",
+      "album": "Gracias Padre",
+      "spotifyTrackId": "6CkiXSTjEfQ8ti2DXpLQRh",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 23,
+      "title": "Danza De Amor / Tu Me Reivindicarás (En Vivo)",
+      "artist": "Ccint Music",
+      "album": "Muéstrame Tu Gloria (En Vivo)",
+      "spotifyTrackId": "1wu4cY10QprLfWvgWCtFOk",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 24,
+      "title": "Melodia De Uncion, La Voz De Mi Amado, Libertad (En Vivo)",
+      "artist": "Ccint Music",
+      "album": "Sigues Siendo Fiel (En Vivo)",
+      "spotifyTrackId": "6ruXHsEDuA4Qcq2IMYxU2n",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 25,
+      "title": "Pelearan contra el cordero",
+      "artist": "Coro Luz del mundo",
+      "album": "Cuando el pueblo del señor alaba a Dios",
+      "spotifyTrackId": "3wZcf2jE7CPB7DNDG25tLZ",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 26,
+      "title": "Grandes y maravillosas son tus obras",
+      "artist": "Coro Luz del mundo",
+      "album": "Cuando el pueblo del señor alaba a Dios",
+      "spotifyTrackId": "6jlaUjlT0fVUZftGImU2g1",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 27,
+      "title": "Mi pensamiento eres tu señor",
+      "artist": "Coro Luz del mundo",
+      "album": "Cuando el pueblo del señor alaba a Dios",
+      "spotifyTrackId": "3VB9Q3chclnYVBPMUXMy9u",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 28,
+      "title": "Yo Me Alegré",
+      "artist": "Coro Menap",
+      "album": "Yo Siento Tu Avivamiento",
+      "spotifyTrackId": "30z6CHwDFfFnmLw9kqhAvv",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 29,
+      "title": "Cuando el Pueblo Alaba a Dios",
+      "artist": "Coro Menap",
+      "album": "Yo Siento Tu Avivamiento",
+      "spotifyTrackId": "6LtCguSob2Jdc9GJOFEDVC",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 30,
+      "title": "En el Altar de Dios",
+      "artist": "Coro Menap",
+      "album": "Yo Siento Tu Avivamiento",
+      "spotifyTrackId": "5HATdYQofmEFqOuARuAtu6",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 31,
+      "title": "En el Principio el Espíritu de Dios",
+      "artist": "Coro Menap",
+      "album": "Yo Siento Tu Avivamiento",
+      "spotifyTrackId": "1rOffMyrO65zkLunJtJ1Fk",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/coro_menap/en_el_principio.shtml"
+    },
+    {
+      "n": 32,
+      "title": "Ven, Espíritu Divino",
+      "artist": "Coro Menap",
+      "album": "Yo Siento Tu Avivamiento",
+      "spotifyTrackId": "2OpifrEeFZPCS5YHjGZclm",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 33,
+      "title": "Te Alabaré mi Buen Jesús",
+      "artist": "Danilo Montero",
+      "album": "Admirable",
+      "spotifyTrackId": "7AyQEi7vGPBHyLwcLdtXxG",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/danilo_montero/te_alabare_mi_buen_jesus.shtml"
+    },
+    {
+      "n": 34,
+      "title": "Bueno es Alabar",
+      "artist": "Danilo Montero",
+      "album": "Admirable",
+      "spotifyTrackId": "6S90J1ENA9sgzfBDEHNyJ7",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/danilo_montero/bueno_es_alabar.shtml"
+    },
+    {
+      "n": 35,
+      "title": "Dulce Refugio",
+      "artist": "Danilo Montero",
+      "album": "Admirable",
+      "spotifyTrackId": "4sQWQitArYe6At6uEWFlHg",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/danilo_montero/dulce_refugio.shtml"
+    },
+    {
+      "n": 36,
+      "title": "Dulce Amor",
+      "artist": "Danilo Montero",
+      "album": "Cantare de Tu Amor",
+      "spotifyTrackId": "0G2XwbA5Ry7XlUHz6NNall",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/danilo_montero/dulce_amor.shtml"
+    },
+    {
+      "n": 37,
+      "title": "Cantaré de Tu Amor",
+      "artist": "Danilo Montero",
+      "album": "Colección de Danilo Montero",
+      "spotifyTrackId": "7kzqc0u8SNQAU5Wca0WNKo",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/danilo_montero/cantare_de_tu_amor.shtml"
+    },
+    {
+      "n": 38,
+      "title": "El Señor es mi pastor",
+      "artist": "Danilo Montero",
+      "album": "Eres Todopoderoso",
+      "spotifyTrackId": "49PeNHITwNkd2gIP4zMOoQ",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/danilo_montero/el_senior_es_mi_pastor.shtml"
+    },
+    {
+      "n": 39,
+      "title": "Abre Mis Ojos",
+      "artist": "Danilo Montero",
+      "album": "Muéstrame Tu Gloria",
+      "spotifyTrackId": "6QN2LDi1HULluoF0cETe6H",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/danilo_montero/abre_mis_ojos.shtml"
+    },
+    {
+      "n": 40,
+      "title": "Salmo 22",
+      "artist": "Dios De Israel",
+      "album": "Avivando El Fuego",
+      "spotifyTrackId": "5RZE4JuAjNYxbI30m0535p",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 41,
+      "title": "Sube",
+      "artist": "Ebenezer San Francisco",
+      "album": "Nuestra Victoria",
+      "spotifyTrackId": "6JsTbCLkoAMUi9W7FfI6CL",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 42,
+      "title": "Comida Verdadera - En Vivo",
+      "artist": "Ebenezer San Francisco / Jorge Jaenz",
+      "album": "Renacer (En Vivo)",
+      "spotifyTrackId": "6GaJDZSuMMZkZiVeBWI62b",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 43,
+      "title": "Viene el Día - En Vivo",
+      "artist": "Ebenezer San Francisco / Jorge Jaenz",
+      "album": "Renacer (En Vivo)",
+      "spotifyTrackId": "3qTTWxFhKvynN0F4Zv5O0n",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 44,
+      "title": "Ante el Rey - En Vivo",
+      "artist": "Ebenezer San Francisco / Jorge Jaenz",
+      "album": "Renacer (En Vivo)",
+      "spotifyTrackId": "0EvcyJwWiMwnLNLhnzXZSg",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 45,
+      "title": "No sé por qué",
+      "artist": "Edgar Rocha",
+      "album": "Escrito Está (En Vivo)",
+      "spotifyTrackId": "5hxJMB1dGnZwO8dmIIio5G",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 46,
+      "title": "La Bienvenida (Medley) [En Vivo]",
+      "artist": "Elim Adorando",
+      "album": "Dios Está Aquí (En Vivo)",
+      "spotifyTrackId": "1eBF1P4bgbwA4jgeZL2HGj",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 47,
+      "title": "El Nombre de Jesús (Medley) [En Vivo]",
+      "artist": "Elim Adorando",
+      "album": "Dios Está Aquí (En Vivo)",
+      "spotifyTrackId": "1kj4q4I18UDsXP1Hriq91K",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 48,
+      "title": "El Grano de Mostaza",
+      "artist": "''El Obama'' Carlos Anderson",
+      "album": "Alabanzas Belicas",
+      "spotifyTrackId": "42ONbP7j05lCPzAeAdFRiI",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 49,
+      "title": "Cuán Grande Es Dios",
+      "artist": "En Espíritu Y En Verdad / Omar Rodriguez Music",
+      "album": "Glorioso Rey",
+      "spotifyTrackId": "0fpW2x6Cd3cBgTGaU8TZKE",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 50,
+      "title": "No Puedo Parar De Alabarte",
+      "artist": "Erick Porta",
+      "album": "Celebración Tanto Amor (en vivo)",
+      "spotifyTrackId": "3xYPHEmVCypJlHD9jVvAg5",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/erick_porta/no_puedo_parar_de_alabarte.shtml"
+    },
+    {
+      "n": 51,
+      "title": "Toda Rodilla",
+      "artist": "Erick Porta / Ministerios Elim",
+      "album": "Jesucristo Reina (En Vivo)",
+      "spotifyTrackId": "18E4jBwk15k088cRwmkL12",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 52,
+      "title": "No Hay Santo Como El Señor",
+      "artist": "Erick Porta / Tony Pérez",
+      "album": "Lenguaje Del Cielo",
+      "spotifyTrackId": "7qLbAHt4aDPCbY2Livsrka",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 53,
+      "title": "El Poderoso Está Del Lado De Nosotros",
+      "artist": "Erick Porta",
+      "album": "Lenguaje Del Cielo",
+      "spotifyTrackId": "1ypaj8wzppzmlggg0B4Q6S",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/erick_porta/el_poderoso_esta_al_lado_de_nosotros.shtml"
+    },
+    {
+      "n": 54,
+      "title": "Pacientemente Esperé En Jehová",
+      "artist": "Erick Porta",
+      "album": "Lenguaje Del Cielo",
+      "spotifyTrackId": "6OeHCJ08LLhB4H3M2PLTw6",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/erick_porta/pacientemente_espere_en_jehova.shtml"
+    },
+    {
+      "n": 55,
+      "title": "Siempre Fiel",
+      "artist": "Erick Porta",
+      "album": "Siempre Fiel",
+      "spotifyTrackId": "0AjQjlFphqgKzLe2TURn4e",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/erick_porta/siempre_fiel.shtml"
+    },
+    {
+      "n": 56,
+      "title": "Fresca Unción",
+      "artist": "Erick Porta",
+      "album": "Siempre Fiel",
+      "spotifyTrackId": "4Dzb6sKEqUmyVkLaH3qnCE",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/erick_porta/fresca_uncion.shtml"
+    },
+    {
+      "n": 57,
+      "title": "A Dios Sea La Gloria",
+      "artist": "Ericson Alexander Molano",
+      "album": "A Dios Sea La Gloria",
+      "spotifyTrackId": "3slGUouQ06yoOHPFStUoM6",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/ericson_alexander_molano/a_dios_sea_la_gloria.shtml"
+    },
+    {
+      "n": 58,
+      "title": "Satúrame",
+      "artist": "Ericson Alexander Molano",
+      "album": "El Vive Hoy",
+      "spotifyTrackId": "1SBMJ3a4Gi6F3C9YWDRxPs",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 59,
+      "title": "Dios Manda Lluvia",
+      "artist": "Ericson Alexander Molano",
+      "album": "El Vive Hoy",
+      "spotifyTrackId": "6HHoCvGgwqWxvuFKz6jzY8",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/ericson_alexander_molano/dios_manda_lluvia.shtml"
+    },
+    {
+      "n": 60,
+      "title": "Siento Su Gloria",
+      "artist": "Ericson Alexander Molano",
+      "album": "Mi Pasión",
+      "spotifyTrackId": "51s1HI5aHVaZXz8zcneyqI",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/ericson_alexander_molano/siento_su_gloria.shtml"
+    },
+    {
+      "n": 61,
+      "title": "Vuelvo a Ti - En Vivo",
+      "artist": "Ericson Alexander Molano",
+      "album": "Vuelvo a Ti",
+      "spotifyTrackId": "6YVrfjjQusCzWByIqwoYiw",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/ericson_alexander_molano/vuelvo_a_ti.shtml"
+    },
+    {
+      "n": 62,
+      "title": "Oye Jehova de Mi Alma Este Cantar",
+      "artist": "Ever zuñiga chinchilla",
+      "album": "En Mi Pueblo vol 2",
+      "spotifyTrackId": "0lE1DzDIRmo4VQKaxLltxU",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 63,
+      "title": "Tú Me Reivindicarás",
+      "artist": "Familia Barro de Dios",
+      "album": "Tú Me Reivindicarás",
+      "spotifyTrackId": "4nCIBDQUjomrzlxzlV9WDx",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 64,
+      "title": "Cántico Nuevo",
+      "artist": "Fernel Monroy",
+      "album": "Salmodiando en Las Naciones",
+      "spotifyTrackId": "0Cxhe6CzTwqRQGRdDbz4bc",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/fernel_monroy/cantico_nuevo.shtml"
+    },
+    {
+      "n": 65,
+      "title": "Le Llaman Guerrero",
+      "artist": "Fernel Monroy",
+      "album": "Salmodiando en Las Naciones",
+      "spotifyTrackId": "738zn6ERe4pbM7VcL7HGP1",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/fernel_monroy/le_llaman_guerrero.shtml"
+    },
+    {
+      "n": 66,
+      "title": "Así Como María (Becerros de Manada)",
+      "artist": "Fernel Monroy",
+      "album": "Salmodiando en Las Naciones",
+      "spotifyTrackId": "1jBLZ5wo6fCSlaBB8AD2xo",
+      "status": "section-only-source",
+      "url": "https://acordes.lacuerda.net/fernel_monroy/asi_como_maria.shtml"
+    },
+    {
+      "n": 67,
+      "title": "Remolineando (Versión Original con Shofar)",
+      "artist": "Fernel Monroy",
+      "album": "Salmodiando en Las Naciones",
+      "spotifyTrackId": "2GmjILHxqxYbQIE3CKZaHL",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/fernel_monroy/remolineando.shtml"
+    },
+    {
+      "n": 68,
+      "title": "Porque Soy Un Sacerdote",
+      "artist": "Fernel Monroy",
+      "album": "Salmodiando en Las Naciones",
+      "spotifyTrackId": "3xpDb9bxKzw299S8tDrGRT",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/fernel_monroy/porque_soy_un_sacerdote.shtml"
+    },
+    {
+      "n": 69,
+      "title": "Ha Exhibido Su Espada (Marcha)",
+      "artist": "Fernel Monroy",
+      "album": "Salmodiando en Las Naciones II",
+      "spotifyTrackId": "24iNFWOCqxL3IHj2FhTuql",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/fernel_monroy/ha_exibido_su_espada.shtml"
+    },
+    {
+      "n": 70,
+      "title": "Ha Exhibido Su Espada",
+      "artist": "Fernel Monroy",
+      "album": "Salmodiando en Las Naciones II",
+      "spotifyTrackId": "1GgTx7tsOBZkDWsqYRoxOA",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/fernel_monroy/ha_exibido_su_espada.shtml"
+    },
+    {
+      "n": 71,
+      "title": "Solo Tienes Que Creer",
+      "artist": "Fito Delgado",
+      "album": "Fe",
+      "spotifyTrackId": "0KmcE0KgBCYARQicFLg06O",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 72,
+      "title": "Cristo Vive en Mí",
+      "artist": "Fito Delgado",
+      "album": "Fe",
+      "spotifyTrackId": "6sOvHfE1YiDvnGru4XbkzF",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 73,
+      "title": "El Sacrificio",
+      "artist": "Generacion De Jesus",
+      "album": "El Remedio de Dios, Vol. 2",
+      "spotifyTrackId": "6wdn80BKG5iuAHwjQyHmtD",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 74,
+      "title": "Envisteme de Poder (En Vivo)",
+      "artist": "Grupo Inspiracion",
+      "album": "Inspiración, Vol. III: Envisteme de Poder (En Vivo)",
+      "spotifyTrackId": "3S4qwTWa0EjZojM9cGGyDD",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 75,
+      "title": "Anhelo Trabajar Por El señor",
+      "artist": "Héctor Jiménez",
+      "album": "Sembraré La Simiente Preciosa",
+      "spotifyTrackId": "3BhVu0j1MrTf8n4RSMYQkk",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 76,
+      "title": "Jehová Gibbor",
+      "artist": "Iglesia de Cristo Ebenezer Honduras / Nuestro Legado",
+      "album": "Nuestro Legado",
+      "spotifyTrackId": "0GVEkaNGrLvbapAB6C7AKL",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/ebenezer/jehova_gibbor.shtml"
+    },
+    {
+      "n": 77,
+      "title": "Abrió el Mar",
+      "artist": "Iglesia de Cristo Ebenezer Honduras / Nuestro Legado",
+      "album": "Nuestro Legado",
+      "spotifyTrackId": "0tdaxWFQApqOK0LMqc3onL",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 78,
+      "title": "Así Como David Danzaba",
+      "artist": "Iglesia de Cristo Ebenezer Honduras / Nuestro Legado",
+      "album": "Nuestro Legado",
+      "spotifyTrackId": "4WgTEN3UvmfjDGTyazGf7m",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 79,
+      "title": "La Canción Feliz",
+      "artist": "Iglesia de Cristo Ebenezer Honduras / Nuestro Legado",
+      "album": "Nuestro Legado",
+      "spotifyTrackId": "4YF1WJIBiy77kpV0JijJQt",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 80,
+      "title": "Las Riquezas Y La Gloria",
+      "artist": "Iglesia de Cristo Ebenezer Honduras",
+      "album": "Todo Adorable",
+      "spotifyTrackId": "2RXNyM5C6055varfI20tkh",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 81,
+      "title": "Hay una Unción Aquí - En Vivo",
+      "artist": "Iglesia Rey De Reyes & Claudio Freidzon",
+      "album": "Corre A La Gracia",
+      "spotifyTrackId": "5bZk4IkKm01nZwxeQbjAsn",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 82,
+      "title": "Espíritu Santo - En Vivo",
+      "artist": "Iglesia Rey De Reyes & Claudio Freidzon",
+      "album": "Corre A La Gracia",
+      "spotifyTrackId": "1asAeRZq5bImHn42DhUKZq",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 83,
+      "title": "David, David Danzaba",
+      "artist": "Inspiración",
+      "album": "Congregacional, Vol. 1",
+      "spotifyTrackId": "4g0iG1Vd1H4Pj2avSzkvYl",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/inspiracion/david_danzaba.shtml"
+    },
+    {
+      "n": 84,
+      "title": "Joel 2:16-19",
+      "artist": "Inspiración",
+      "album": "Congregacional, Vol. 1",
+      "spotifyTrackId": "4fe8GrogLMvp4QjB3niuFc",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/inspiracion/joel_21619.shtml"
+    },
+    {
+      "n": 85,
+      "title": "El Espiritu De Dios Está En Este Lugar",
+      "artist": "Inspiración",
+      "album": "Congregacional, Vol. 2",
+      "spotifyTrackId": "6tsZdCQs7MtRw0UaCidqZ5",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/inspiracion/el_espiritu_de_dios_esta_en_este_lugar.shtml"
+    },
+    {
+      "n": 86,
+      "title": "Los Enemigos Del Señor Están Cayendo",
+      "artist": "Inspiración",
+      "album": "Conquistando A Las Naciones",
+      "spotifyTrackId": "2GU89ZebP2zFeqQXE1uhHG",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/inspiracion/los_enemigos_del_senor.shtml"
+    },
+    {
+      "n": 87,
+      "title": "Por Todo Lo Que Hiciste En Mí",
+      "artist": "Inspiración",
+      "album": "El Tiempo Es Hoy, Vol. IX",
+      "spotifyTrackId": "1HpyLOKIdNKCjHlkCmHxV4",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/inspiracion/por_todo_lo_que_hiciste_en_mi.shtml"
+    },
+    {
+      "n": 88,
+      "title": "Canta Aleluya",
+      "artist": "Inspiración",
+      "album": "El Tiempo Es Hoy, Vol. IX",
+      "spotifyTrackId": "50d4Y7w14ZFUSJk1bArvUT",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/inspiracion/canta_aleluya.shtml"
+    },
+    {
+      "n": 89,
+      "title": "Él Me Levantará",
+      "artist": "Inspiración",
+      "album": "Espiritu Santo Gracias, Vol. 1",
+      "spotifyTrackId": "2uYUh6fNl30dQ9tQbSLuXJ",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/inspiracion/el_me_levantara.shtml"
+    },
+    {
+      "n": 90,
+      "title": "Gózate Delante Del Señor",
+      "artist": "Inspiración",
+      "album": "Espiritu Santo Gracias, Vol. 1",
+      "spotifyTrackId": "4mM9MYayjcm3KibuCp2P72",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/inspiracion/gozate_delante_del_senior.shtml"
+    },
+    {
+      "n": 91,
+      "title": "Haré Un Altar Para Ti",
+      "artist": "Inspiración",
+      "album": "Espiritu Santo Gracias, Vol. 1",
+      "spotifyTrackId": "6PUdY6pB8XtYi2PlY2YpmT",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/inspiracion/hare_un_altar_para_ti.shtml"
+    },
+    {
+      "n": 92,
+      "title": "Mi Corazón Está Dispuesto",
+      "artist": "Inspiración",
+      "album": "Espiritu Santo Gracias, Vol. 1",
+      "spotifyTrackId": "1jrN4jCb8IWDdtrnudTAQF",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/inspiracion/mi_corazon_esta_dispuesto.shtml"
+    },
+    {
+      "n": 93,
+      "title": "El Gozo De Mi Vida Eres Tú",
+      "artist": "Inspiración",
+      "album": "Espiritu Santo Gracias, Vol. 1",
+      "spotifyTrackId": "3O9MUM5RbCuyzw5sMDG1Lm",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/inspiracion/el_gozo_de_mi_vida_eres_tu.shtml"
+    },
+    {
+      "n": 94,
+      "title": "David, David Danzaba",
+      "artist": "Inspiración",
+      "album": "Espiritu Santo Gracias, Vol. 1",
+      "spotifyTrackId": "0vkEXvYh9VLxArIs9w8iZu",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/inspiracion/david_danzaba.shtml"
+    },
+    {
+      "n": 95,
+      "title": "Cantad A Jehová Cántico Nuevo",
+      "artist": "Inspiración",
+      "album": "Espiritu Santo Gracias, Vol. 1",
+      "spotifyTrackId": "4W6ni9QxBC4M98SRkjLUOd",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/inspiracion/cantad_a_jehova_cantico_nuevo.shtml"
+    },
+    {
+      "n": 96,
+      "title": "Eres Digno",
+      "artist": "Inspiración",
+      "album": "Espiritu Santo Gracias, Vol. 1",
+      "spotifyTrackId": "1s0wne64ZvPdFiQmMEVahj",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/inspiracion/eres_digno.shtml"
+    },
+    {
+      "n": 97,
+      "title": "Espíritu Eres Real",
+      "artist": "Inspiración",
+      "album": "!Hay Victoria!",
+      "spotifyTrackId": "1yAmlaP3rcqWsx79rP09Qp",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/inspiracion/espiritu_eres_real.shtml"
+    },
+    {
+      "n": 98,
+      "title": "Oh Moradora De Sion",
+      "artist": "Jaime Murrell",
+      "album": "25 Años De Ministerio",
+      "spotifyTrackId": "5vvveNgqnKMN6EpAxod3as",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/jaime_murrell/oh_moradora_de_sion.shtml"
+    },
+    {
+      "n": 99,
+      "title": "Que Sería De Mi - En Vivo",
+      "artist": "Jesús Adrián Romero",
+      "album": "Cerca De Ti",
+      "spotifyTrackId": "6765SHKbINOPj3EJFnBGMs",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/jesus_adrian_romero/que_seria_de_mi.shtml"
+    },
+    {
+      "n": 100,
+      "title": "Tal Como Soy",
+      "artist": "Jesús Adrián Romero",
+      "album": "Colección Adoración",
+      "spotifyTrackId": "6pkcy9PJt40IsyNpd7NV0s",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/jesus_adrian_romero/tal_como_soy.shtml"
+    },
+    {
+      "n": 101,
+      "title": "Mi Jesús, Mi Amado",
+      "artist": "Jesús Adrián Romero",
+      "album": "Colección Adoración",
+      "spotifyTrackId": "6Th6d1tXLrROECGQHDaL5x",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/jesus_adrian_romero/mi_jesus_mi_amado.shtml"
+    },
+    {
+      "n": 102,
+      "title": "Con Manos Vacías",
+      "artist": "Jesús Adrián Romero",
+      "album": "Colección Adoración",
+      "spotifyTrackId": "2vAYYOwfKVR3cCqg1mI6No",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/jesus_adrian_romero/con_manos_vacias.shtml"
+    },
+    {
+      "n": 103,
+      "title": "Cerca De Ti",
+      "artist": "Jesús Adrián Romero",
+      "album": "Colección Adoración",
+      "spotifyTrackId": "2UPhozXpfN6NFtuG9vMgfC",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/jesus_adrian_romero/cerca_de_ti.shtml"
+    },
+    {
+      "n": 104,
+      "title": "Sumérgeme",
+      "artist": "Jesús Adrián Romero",
+      "album": "Colección Adoración",
+      "spotifyTrackId": "4vmPvQY7m6MC77mKDdJIkD",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/jesus_adrian_romero/sumergeme.shtml"
+    },
+    {
+      "n": 105,
+      "title": "A Sus Pies",
+      "artist": "Jesús Adrián Romero",
+      "album": "Colección Adoración",
+      "spotifyTrackId": "0YwFMo2jsOKL1dWEYHKccl",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/jesus_adrian_romero/a_sus_pies.shtml"
+    },
+    {
+      "n": 106,
+      "title": "Enviame a Mi",
+      "artist": "Jesús Adrián Romero",
+      "album": "Colección Adoración",
+      "spotifyTrackId": "2FF17M1eTlWMEWD7odigXh",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 107,
+      "title": "Pan De Vida - En Vivo",
+      "artist": "Jesús Adrián Romero",
+      "album": "A Sus Pies",
+      "spotifyTrackId": "5Y5LY9fy1kFwl71QHw4UEe",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/jesus_adrian_romero/pan_de_vida.shtml"
+    },
+    {
+      "n": 108,
+      "title": "A Sus Pies - En Vivo",
+      "artist": "Jesús Adrián Romero",
+      "album": "A Sus Pies",
+      "spotifyTrackId": "4PbEPAjJ3YXNxWIDKcC0NK",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/jesus_adrian_romero/a_sus_pies.shtml"
+    },
+    {
+      "n": 109,
+      "title": "Abre Los Cielos - En Vivo",
+      "artist": "Jesús Adrián Romero",
+      "album": "Te Daré Lo Mejor (En Vivo)",
+      "spotifyTrackId": "0RaCcZohOEVDMVDIWduWOZ",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/jesus_adrian_romero/abre_los_cielos.shtml"
+    },
+    {
+      "n": 110,
+      "title": "Un Destello De Tu Gloria - En Vivo",
+      "artist": "Jesús Adrián Romero",
+      "album": "Te Daré Lo Mejor (En Vivo)",
+      "spotifyTrackId": "1p857QcWbg695PflPkPYIE",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/jesus_adrian_romero/un_destello_de_tu_gloria.shtml"
+    },
+    {
+      "n": 111,
+      "title": "Tu Estás Aquí - En Vivo",
+      "artist": "Jesús Adrián Romero / Marcela Gandara",
+      "album": "Te Daré Lo Mejor (En Vivo)",
+      "spotifyTrackId": "3X5KX8EM2lBRs35CL2HMAQ",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 112,
+      "title": "Cada Mañana",
+      "artist": "Jesús Adrián Romero",
+      "album": "Un Brote De Adoración",
+      "spotifyTrackId": "0AazdjQf5l6Wtih13ya0Se",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/jesus_adrian_romero/cada_maniana.shtml"
+    },
+    {
+      "n": 113,
+      "title": "Esta Cayendo",
+      "artist": "Jose Luis Reyes",
+      "album": "El Dios De Lo Imposible",
+      "spotifyTrackId": "6XXn8f7bPRT2hP4j5nYbcJ",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 114,
+      "title": "Dios No Nos Trajo Hasta Aquí para Volver Atrás (feat. Juan Carlos Alvarado) [En Vivo]",
+      "artist": "Josué Orozco / Juan Carlos Alvarado",
+      "album": "Sólo por Tú Amor (En Vivo)",
+      "spotifyTrackId": "3Xm1hNONrqOl5SUjpWVJxr",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 115,
+      "title": "Celebra Victorioso",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Celebra Victorioso",
+      "spotifyTrackId": "5SalhBIQrEXU76v9QGL6Sh",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/celebra_victorioso.shtml"
+    },
+    {
+      "n": 116,
+      "title": "Le Llaman Guerrero (lenta) - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Fuego",
+      "spotifyTrackId": "0s37o1STBeUDAiyIO62lrL",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/le_llaman_guerrero.shtml"
+    },
+    {
+      "n": 117,
+      "title": "Le Llaman Guerrero - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Fuego",
+      "spotifyTrackId": "4vgsDzUuJjPyX7enMK11vZ",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/le_llaman_guerrero.shtml"
+    },
+    {
+      "n": 118,
+      "title": "Jehová Es Mi Guerrero/Le Llaman (Reprise) - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Fuego",
+      "spotifyTrackId": "5IsqUSeMnxmoEdX9Ooot0r",
+      "status": "section-only-source",
+      "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/jehova_es_mi_guerrero.shtml"
+    },
+    {
+      "n": 119,
+      "title": "Eres Señor Vencedor - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Fuego",
+      "spotifyTrackId": "3T56QpufAmXo4Y29o8Bsgw",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/eres_senior_vencedor.shtml"
+    },
+    {
+      "n": 120,
+      "title": "El Poderoso de Israel - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Fuego",
+      "spotifyTrackId": "0Uh50z2eslMbLWoewgHqKM",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/el_poderoso_de_israel.shtml"
+    },
+    {
+      "n": 121,
+      "title": "Cantare al Señor Por Siempre - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Fuego",
+      "spotifyTrackId": "0fYWuxkiMqzwqWJSJ9e9IW",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/cantare_al_senior_por_siempre.shtml"
+    },
+    {
+      "n": 122,
+      "title": "Los Enemigos de Jehová - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Fuego",
+      "spotifyTrackId": "3wwROWXzKHnbTPGehmBeVs",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/los_enemigos_de_jehova.shtml"
+    },
+    {
+      "n": 123,
+      "title": "Libre - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Fuego",
+      "spotifyTrackId": "2ingUl2WYQjhm4JQCmVBLs",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/libre_yo_soy_libre.shtml"
+    },
+    {
+      "n": 124,
+      "title": "Pues Tu Glorioso Eres Señor - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Fuego",
+      "spotifyTrackId": "3e5QkOeQnFBwm7eunygLnJ",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/pues_tu_glorioso_eres_senior.shtml"
+    },
+    {
+      "n": 125,
+      "title": "Yo te Amo/Yo te Adoro (Reprise) - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Fuego",
+      "spotifyTrackId": "3pFngxN66TQvIJzhNxK4lW",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 126,
+      "title": "Cristo Vive - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Fuego",
+      "spotifyTrackId": "0vGvRk8IAohSGx6z50TuBN",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/cristo_vive.shtml"
+    },
+    {
+      "n": 127,
+      "title": "Cristo No Esta Muerto - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Fuego",
+      "spotifyTrackId": "5z3x96253PT5X1ZyZOhF7h",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/cristo_no_esta_muerto.shtml"
+    },
+    {
+      "n": 128,
+      "title": "La Tengo - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Fuego",
+      "spotifyTrackId": "15WQjRfYDQNjTcZ4hbX2kL",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/la_tengo.shtml"
+    },
+    {
+      "n": 129,
+      "title": "Hay Un Gozo Que No Puede Parar - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Fuego",
+      "spotifyTrackId": "5Q0R0OdKucd25qRUR9vG4t",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/hay_un_gozo.shtml"
+    },
+    {
+      "n": 130,
+      "title": "Danza Hija de Sion - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Fuego",
+      "spotifyTrackId": "6IstByAeRSC5wLVxLGiic4",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/danza_hija_de_sion.shtml"
+    },
+    {
+      "n": 131,
+      "title": "Quiero Buscarte Mas - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Fuego",
+      "spotifyTrackId": "79Hkkg3V7Rp3KAAVsfUafl",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/quiero_buscarte_mas.shtml"
+    },
+    {
+      "n": 132,
+      "title": "Para Danzar (Medley)",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Para Danzar (Medley)",
+      "spotifyTrackId": "5DGNZzF8gqthhfaUZPydGW",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 133,
+      "title": "Vivo Para Cristo - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Vivo Para Cristo",
+      "spotifyTrackId": "2dK0Ld3YAGwIFDPNrrhsuK",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/vivo_para_cristo.shtml"
+    },
+    {
+      "n": 134,
+      "title": "El Borde De Su Manto - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "album": "Vivo Para Cristo",
+      "spotifyTrackId": "6tYqerwTycPh7ooEszkobq",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/el_borde_de_su_manto.shtml"
+    },
+    {
+      "n": 135,
+      "title": "Él Es Grande",
+      "artist": "Llamada Final / Inspiración",
+      "album": "Él Es Grande (Inspiración Vol. 8)",
+      "spotifyTrackId": "4yUNN6Tk1H4qjWw7ivu05N",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 136,
+      "title": "Mi Corazón Se Regocija En El Señor",
+      "artist": "Llamada Final / Tony Pérez / Inspiración",
+      "album": "Envísteme de Poder (Inspiración Vol. 3)",
+      "spotifyTrackId": "1X33SFqCsMtqbb5L7ELwaD",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 137,
+      "title": "Grande Es el Señor",
+      "artist": "Marco Barrientos",
+      "album": "Clamor de Guerra",
+      "spotifyTrackId": "7uZ2Jy1jcKf1cZLxOrwZ6f",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/marco_barrientos/grande_es_el_senior.shtml"
+    },
+    {
+      "n": 138,
+      "title": "Preciosa Sangre",
+      "artist": "Marco Barrientos / Julio Melgar",
+      "album": "El Encuentro",
+      "spotifyTrackId": "0LXxKUA4sIwRDSPjyjtijp",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/marco_barrientos/preciosa_sangre.shtml"
+    },
+    {
+      "n": 139,
+      "title": "Será Llena la Tierra",
+      "artist": "Marco Barrientos",
+      "album": "Legado de Adoración",
+      "spotifyTrackId": "0EqYJ3yj2QCxFZbDC4u77I",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/marco_barrientos/sera_llena_la_tierra.shtml"
+    },
+    {
+      "n": 140,
+      "title": "Mira Lo Que Hizo Dios",
+      "artist": "Marco Barrientos & Abel Brito",
+      "album": "Es Hora de Adorarle",
+      "spotifyTrackId": "44O50OCf2wwxWmjZDgnzO6",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/marco_barrientos/mira_lo_que_hizo_dios.shtml"
+    },
+    {
+      "n": 141,
+      "title": "Temprano yo te buscaré",
+      "artist": "Marcos Witt / Jesús Adrián Romero",
+      "album": "25 Concierto Conmemorativo (En Vivo)",
+      "spotifyTrackId": "2UpIPk8SGn02aqZCfOEXcW",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/marcos_witt/temprano_yo_te_buscare.shtml"
+    },
+    {
+      "n": 142,
+      "title": "Escucharte Hablar",
+      "artist": "Marcos Witt",
+      "album": "Enciende una Luz",
+      "spotifyTrackId": "1Jsr3olWK54xIVnoSJvhy6",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/marcos_witt/escucharte_hablar.shtml"
+    },
+    {
+      "n": 143,
+      "title": "Somos el pueblo de Dios",
+      "artist": "Marcos Witt",
+      "album": "Homenaje a Jesús (En Vivo)",
+      "spotifyTrackId": "3MF7cqKTCqQ6Xm8Pe2igJh",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/marcos_witt/somos_el_pueblo_de_dios.shtml"
+    },
+    {
+      "n": 144,
+      "title": "Me Gozaré",
+      "artist": "Marcos Witt",
+      "album": "Proyecto AA",
+      "spotifyTrackId": "2pgPGHYJuUnHKmhETGDmX1",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/marcos_witt/me_gozare.shtml"
+    },
+    {
+      "n": 145,
+      "title": "Restaurarás el Santo Lugar",
+      "artist": "Marcos Witt",
+      "album": "Proyecto AA",
+      "spotifyTrackId": "0rWFnAeWSgp0x0XR6v3sXk",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 146,
+      "title": "Espíritu de Dios",
+      "artist": "Maurilio Suárez y el grupo Méssia",
+      "album": "Entre Tus Manos",
+      "spotifyTrackId": "6m52bMkPKGYv7RSlo1rUHJ",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 147,
+      "title": "Música Del Cielo",
+      "artist": "Miel San Marcos",
+      "album": "Avivamiento 1",
+      "spotifyTrackId": "3AEy6WuEVCftiWdm6cX91m",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/musica_del_cielo.shtml"
+    },
+    {
+      "n": 148,
+      "title": "Levántate Señor",
+      "artist": "Miel San Marcos",
+      "album": "Avivamiento 1",
+      "spotifyTrackId": "5dip7Lh3J6oCCvISSdr1aO",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/levantate_senior.shtml"
+    },
+    {
+      "n": 149,
+      "title": "Vino Celestial",
+      "artist": "Miel San Marcos",
+      "album": "Avivamiento 1",
+      "spotifyTrackId": "2Idfgbdvy9O1Ii6KpHB3kV",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 150,
+      "title": "Cuando Pienso",
+      "artist": "Miel San Marcos",
+      "album": "Avivamiento 1",
+      "spotifyTrackId": "72vGvlXHnZ7H8UP6IZhwKW",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/cuando_pienso.shtml"
+    },
+    {
+      "n": 151,
+      "title": "Viene Ya (En Vivo)",
+      "artist": "Miel San Marcos",
+      "album": "Como En El Cielo (En Vivo)",
+      "spotifyTrackId": "0ENmylIk4ML9ijKZdhml8T",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 152,
+      "title": "Dios Está Aqui (En Vivo)",
+      "artist": "Miel San Marcos",
+      "album": "Como En El Cielo (En Vivo)",
+      "spotifyTrackId": "5X5nNbkEKKb4Ew1ZWvw6V6",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/dios_esta_aqui.shtml"
+    },
+    {
+      "n": 153,
+      "title": "Grande Y Fuerte",
+      "artist": "Miel San Marcos",
+      "album": "Dios Es Real",
+      "spotifyTrackId": "2YJ8AzNQjkEnX1TH33E46g",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/grande_y_fuerte.shtml"
+    },
+    {
+      "n": 154,
+      "title": "Eres Mi Escudo",
+      "artist": "Miel San Marcos",
+      "album": "Dios Es Real",
+      "spotifyTrackId": "0vujY1TZglxCttCtELth5n",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/eres_mi_escudo.shtml"
+    },
+    {
+      "n": 155,
+      "title": "Yo Venceré",
+      "artist": "Miel San Marcos",
+      "album": "Dios Es Real",
+      "spotifyTrackId": "6q8gNL44VMVDo4rx6wF8nC",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 156,
+      "title": "Medley Evangelio - En Vivo",
+      "artist": "Miel San Marcos / Josh Morales / Matthew Morales / Luis Morales Jr.",
+      "album": "EVANGELIO (En Vivo)",
+      "spotifyTrackId": "1GcVAXo149p2bCZLR2EyOG",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/medley_evangelio.shtml"
+    },
+    {
+      "n": 157,
+      "title": "Danzo en el Río (En Vivo)",
+      "artist": "Miel San Marcos / Josh Morales",
+      "album": "Pentecostés (En Vivo)",
+      "spotifyTrackId": "0I3cmPOnNwgCOVtO6tfQsG",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/danzo_en_el_rio.shtml"
+    },
+    {
+      "n": 158,
+      "title": "El Poderoso de Israel (En Vivo)",
+      "artist": "Miel San Marcos / Marco Barrientos",
+      "album": "Pentecostés (En Vivo)",
+      "spotifyTrackId": "1I2KbwfhA7HoevQOVhh91O",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/medley_el_poderoso_de_israel.shtml"
+    },
+    {
+      "n": 159,
+      "title": "Eres Todopoderoso (En Vivo)",
+      "artist": "Miel San Marcos / Danilo Montero",
+      "album": "Pentecostés (En Vivo)",
+      "spotifyTrackId": "6O7y9cPLTZd7nycusbRc5P",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/eres_todopoderoso.shtml"
+    },
+    {
+      "n": 160,
+      "title": "Cuando Pienso (En Vivo)",
+      "artist": "Miel San Marcos / Josh Morales",
+      "album": "Pentecostés (En Vivo)",
+      "spotifyTrackId": "0FMCuTrcs0ZmPjez4cIc34",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/cuando_pienso.shtml"
+    },
+    {
+      "n": 161,
+      "title": "Agradecido",
+      "artist": "Miel San Marcos",
+      "album": "Proezas",
+      "spotifyTrackId": "4T0lFmU1COfW9VpD2OD86l",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/agradecido.shtml"
+    },
+    {
+      "n": 162,
+      "title": "Los Muros Caerán",
+      "artist": "Miel San Marcos",
+      "album": "Proezas",
+      "spotifyTrackId": "3Lywk0gqbG3YoW4Mo3eNPW",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/los_muros_caeran.shtml"
+    },
+    {
+      "n": 163,
+      "title": "No Callaré",
+      "artist": "Miel San Marcos",
+      "album": "Proezas",
+      "spotifyTrackId": "1QsgVDqhQ1GkCzJCrnOIjF",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/no_callare.shtml"
+    },
+    {
+      "n": 164,
+      "title": "Llegó El Tiempo",
+      "artist": "Miel San Marcos",
+      "album": "Proezas",
+      "spotifyTrackId": "5xOdXiAQl8b9OAedNfeI8o",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/llego_el_tiempo.shtml"
+    },
+    {
+      "n": 165,
+      "title": "Óleo De Alegría (feat. Ovidio Barrios)",
+      "artist": "Miel San Marcos / Ovidio Barrios",
+      "album": "Proezas",
+      "spotifyTrackId": "56W5sxRrdEjCgAO0ZrWWVK",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/con_oleo_de_alegria.shtml"
+    },
+    {
+      "n": 166,
+      "title": "El Señor Es Mi Rey (feat. Tony Perez)",
+      "artist": "Miel San Marcos / Tony Pérez",
+      "album": "Proezas",
+      "spotifyTrackId": "7APlp9ZOXPuv9CzONC68T8",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/el_senior_es_mi_rey.shtml"
+    },
+    {
+      "n": 167,
+      "title": "Cristo No Está Muerto (feat. Juan Carlos Alvarado)",
+      "artist": "Miel San Marcos / Juan Carlos Alvarado",
+      "album": "Proezas",
+      "spotifyTrackId": "6bDHJjWEiWux7haSU8r4g5",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/cristo_no_esta_muerto.shtml"
+    },
+    {
+      "n": 168,
+      "title": "Remolineando (feat. Fernel Monroy)",
+      "artist": "Miel San Marcos / Fernel Monroy",
+      "album": "Proezas",
+      "spotifyTrackId": "1NmECxDikubj4Hhu1dbrhl",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 169,
+      "title": "Amamos Tu Presencia",
+      "artist": "Miel San Marcos",
+      "album": "Proezas",
+      "spotifyTrackId": "0WQIkqhtJBYnHBE3xMg9M7",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/amamos_tu_presencia.shtml"
+    },
+    {
+      "n": 170,
+      "title": "Amamos Tu Presencia (feat. Marcos Brunet)",
+      "artist": "Miel San Marcos / Marcos Brunet",
+      "album": "Tu Habitación",
+      "spotifyTrackId": "6f3YA7Khg41z93h7WsVp1N",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/amamos_tu_presencia.shtml"
+    },
+    {
+      "n": 171,
+      "title": "Me Gozare",
+      "artist": "Ministerios Ebenezer Guatemala",
+      "album": "Juntos En Unidad (En Vivo)",
+      "spotifyTrackId": "65GmdWPHlOYUlNnK5pOzyH",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 172,
+      "title": "Quiero Conocerte",
+      "artist": "Ministerios Judà",
+      "album": "Perfume de Adoración",
+      "spotifyTrackId": "5hdYLd5OQow8mkLBT6K4x3",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 173,
+      "title": "Danza de Amor",
+      "artist": "Nuestro Legado",
+      "album": "Danza de Amor",
+      "spotifyTrackId": "524NnsSLotss3SGZoDjz5S",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 174,
+      "title": "Grita Canta y Danza",
+      "artist": "Nuevo Pacto",
+      "album": "Dios Padre, Vol. 3",
+      "spotifyTrackId": "26xSQy8kB4gzDs3W6wOFxz",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 175,
+      "title": "Como Hizo David",
+      "artist": "Palabra en Acción / Juan Carlos Alvarado",
+      "album": "Glorificad a Jehová",
+      "spotifyTrackId": "75IhuMXXHxnSCnaWKwPjSQ",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/palabra_en_accion/como_hizo_david.shtml"
+    },
+    {
+      "n": 176,
+      "title": "Entra En La Presencia Del Señor",
+      "artist": "Palabra en Acción / Juan Carlos Alvarado",
+      "album": "Glorificad a Jehová",
+      "spotifyTrackId": "4Ixq7Likr8ajOt3ZF86Qgv",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/palabra_en_accion/entra_en_la_presencia.shtml"
+    },
+    {
+      "n": 177,
+      "title": "Yo Celebraré",
+      "artist": "Palabra en Acción / Juan Carlos Alvarado",
+      "album": "Jehová Es Mi Guerrero",
+      "spotifyTrackId": "1XqMWARIFnxZaI20aLW4Uy",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/palabra_en_accion/yo_celebrare.shtml"
+    },
+    {
+      "n": 178,
+      "title": "Me Gozaré",
+      "artist": "Palabra en Acción / Juan Carlos Alvarado",
+      "album": "Más Que Vencedor",
+      "spotifyTrackId": "4yneAwWcRRlNKGBmHRwQYq",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/palabra_en_accion/me_gozare.shtml"
+    },
+    {
+      "n": 179,
+      "title": "Hay Una Fuente En Mí - En Vivo",
+      "artist": "Palabra en Acción / Juan Carlos Alvarado",
+      "album": "Santo Es El Señor",
+      "spotifyTrackId": "5QcC5tFnqsNOjxksGXZHCB",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/palabra_en_accion/hay_una_fuente_en_mi.shtml"
+    },
+    {
+      "n": 180,
+      "title": "Yo Quiero Estar Donde Tu Estás - En Vivo",
+      "artist": "Palabra en Acción / Juan Carlos Alvarado",
+      "album": "Santo Es El Señor",
+      "spotifyTrackId": "4yHpEcaH1WLJ2e6MlMXZXd",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/palabra_en_accion/yo_solo_quiero_estar_donde_tu_estas.shtml"
+    },
+    {
+      "n": 181,
+      "title": "Pon Aceite En Mi Lampara/Saturame Señor/Ven, Ven, Ven - En Vivo",
+      "artist": "Ricardo Rodriguez",
+      "album": "Alabanzas Del Pueblo 3",
+      "spotifyTrackId": "5jbWcl1pzrfLDMANIrUsA0",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 182,
+      "title": "Por La Mañana Yo Dirijo Mi Alabanza",
+      "artist": "Ricardo Rodriguez",
+      "album": "Clasicos De Siempre",
+      "spotifyTrackId": "1JYI9aj8wLWLMxXPxcsKoR",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 183,
+      "title": "Cuan Grande Es Él",
+      "artist": "Rojo",
+      "album": "Apasionado Por Ti",
+      "spotifyTrackId": "1hKoiOqQq8FJU4GzLwuqRN",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/rojo/cuan_grande_es_el.shtml"
+    },
+    {
+      "n": 184,
+      "title": "Este Corito",
+      "artist": "Salvador",
+      "album": "Make Some Noise (Deluxe)",
+      "spotifyTrackId": "0IK3QfBUomnijyUJQzrVPg",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 185,
+      "title": "Queremos a Cristo Proclamar - En Vivo",
+      "artist": "Santiago Soto y Sus Tejones Band",
+      "album": "Fiesta en Honor a Jehová (En Vivo)",
+      "spotifyTrackId": "1lcuI2dTld5O1ycqq6AcLp",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 186,
+      "title": "Jesús",
+      "artist": "Tony Pérez",
+      "album": "Tu Rio Fluira",
+      "spotifyTrackId": "6NLNWoyAfVQHSSUwB7If2l",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 187,
+      "title": "Celebremos",
+      "artist": "Viento Recio",
+      "album": "Celebremos",
+      "spotifyTrackId": "4Bkcm0n1K17Vc5Sw2csfZO",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 188,
+      "title": "Cristo Yo Te Amo",
+      "artist": "Vino Nuevo",
+      "album": "Se Escucha La Lluvia",
+      "spotifyTrackId": "2i3omjTIX5Q16rKnF6fGlL",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/vino_nuevo/cristo_yo_te_amo.shtml"
+    },
+    {
+      "n": 189,
+      "title": "En Totalidad a Ti",
+      "artist": "Vino Nuevo",
+      "album": "Ven Y Llena Esta Casa",
+      "spotifyTrackId": "5W3PrDRuoXfDyolUWkwLzy",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/vino_nuevo/en_totalidad_a_ti.shtml"
+    },
+    {
+      "n": 190,
+      "title": "Vamos Escalando Peldaños (En Vivo)",
+      "artist": "Virginia Brito",
+      "album": "Vamos Escalando Peldaños (En Vivo)",
+      "spotifyTrackId": "2uFwKG35eJAFOQ9lZJ3Eeu",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 191,
+      "title": "YA SE OYE EL SHOFAR",
+      "artist": "VITTORIA MUSIC",
+      "album": "AVIVAMIENTO DEL ESPIRITU SANTO",
+      "spotifyTrackId": "4y8fqZb6U6JRNeEoFf3EEq",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 192,
+      "title": "Huele a Victoria",
+      "artist": "Santiago Torres Jr",
+      "album": "Coros De Poder Y Uncion",
+      "spotifyTrackId": "4ZCJqbSOAgtfaXy28YF8OV",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 193,
+      "title": "Poderoso Guerrero (En Vivo)",
+      "artist": "William Salgado / Mahanaim Honduras",
+      "album": "La Voz De Mi Amado (En Vivo)",
+      "spotifyTrackId": "1ztBdxAdDHT6hH2zwGd4CT",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 194,
+      "title": "La Voz De Mi Amado (En Vivo)",
+      "artist": "Geovani Canelo / Mahanaim Honduras",
+      "album": "La Voz De Mi Amado (En Vivo)",
+      "spotifyTrackId": "6BNdGH1fVzktRXnZeCQdnU",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 195,
+      "title": "Al Rey",
+      "artist": "Marcos Witt",
+      "album": "Dios de Pactos",
+      "spotifyTrackId": "0wewqRopZH7ESyJR5QZwcs",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/marcos_witt/al_rey.shtml"
+    },
+    {
+      "n": 196,
+      "title": "Canto Danzo Salto",
+      "artist": "Miel San Marcos",
+      "album": "Avivamiento 2",
+      "spotifyTrackId": "5FXALCzOPuLhX07GRnrooO",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/miel_san_marcos/canto_danzo_salto.shtml"
+    },
+    {
+      "n": 197,
+      "title": "Pon Aceite en mi Vida",
+      "artist": "Jaime Murrell",
+      "album": "Cristo Reina (En Vivo)",
+      "spotifyTrackId": "3qACviami2SMB7SuuMUtiE",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/jaime_murrell/pon_aceite_en_mi_vida.shtml"
+    },
+    {
+      "n": 198,
+      "title": "Medley Clásicos (En Vivo)",
+      "artist": "Ccint Music",
+      "album": "Nuestra Recompensa (En Vivo)",
+      "spotifyTrackId": "1n587plcAgby66GxKmQf7f",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 199,
+      "title": "Soy Nueva Criatura - En Vivo",
+      "artist": "Jesús Adrián Romero",
+      "album": "Cerca De Ti",
+      "spotifyTrackId": "6GDJugv7mx48voVUYcb2Vf",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/jesus_adrian_romero/soy_nueva_criatura.shtml"
+    },
+    {
+      "n": 200,
+      "title": "Yo Me Alegré",
+      "artist": "Hannah Ponce / Iglesia de Cristo Ebenezer Honduras / Luis Ponce Jr.",
+      "album": "Desde Ahora y Para Siempre",
+      "spotifyTrackId": "2dVAoRvVF6tknX5BZcxtOB",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 201,
+      "title": "El Espíritu Y La Novia",
+      "artist": "Hannah Ponce / Iglesia de Cristo Ebenezer Honduras",
+      "album": "Desde Ahora y Para Siempre",
+      "spotifyTrackId": "4vRjlIo48ZsQ7AkDJaKFhj",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 202,
+      "title": "Árboles Del Campo",
+      "artist": "Hannah Ponce / Iglesia de Cristo Ebenezer Honduras / Luis Ponce Jr.",
+      "album": "Desde Ahora y Para Siempre",
+      "spotifyTrackId": "4xSCnkNlu9AfOlKqTWOyqs",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 203,
+      "title": "Toda La Casa",
+      "artist": "Hannah Ponce / Iglesia de Cristo Ebenezer Honduras / Luis Ponce Jr.",
+      "album": "Desde Ahora y Para Siempre",
+      "spotifyTrackId": "4oLpxlsat9OMMIhuzNwyFu",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 204,
+      "title": "Para Ti Oh Jehová",
+      "artist": "Hannah Ponce / Iglesia de Cristo Ebenezer Honduras / Luis Ponce Jr.",
+      "album": "Desde Ahora y Para Siempre",
+      "spotifyTrackId": "5rDYu48iWQgzWqARrr7VIr",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 205,
+      "title": "Cantaré al Señor Por Siempre",
+      "artist": "Marco Barrientos",
+      "status": "no-confirmed-lacuerda-source-in-this-pass",
+      "url": null
+    },
+    {
+      "n": 206,
+      "title": "Con Mi Dios - En Vivo",
+      "artist": "Jesús Adrián Romero",
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/jesus_adrian_romero/con_mi_dios.shtml"
+    }
+  ]
+}
