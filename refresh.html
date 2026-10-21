@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#1a1518"><title>Worship Chords · Update Check</title>
+<style>body{font:16px system-ui,-apple-system,sans-serif;background:#161416;color:#f7eddf;max-width:510px;margin:10vh auto;padding:22px;line-height:1.5}h1{font-family:Georgia,serif}main{padding:22px;border:1px solid #6d564b;border-radius:18px;background:#242022}button,a.action{appearance:none;border:0;border-radius:12px;background:#dbb980;color:#24180e;font-weight:750;padding:16px;display:block;width:100%;font:inherit;text-align:center;text-decoration:none;box-sizing:border-box;margin-top:15px}button:disabled{opacity:.45}small{color:#cfc1b7}#status{white-space:pre-wrap}</style></head>
+<body><main><h1>Worship Chords</h1><h2>Update checker</h2><p id="status" role="status">Checking the published version…</p><button id="refresh" type="button" disabled>Clear outdated app files and reopen</button><small>This clears cached website files only. It does not clear localStorage, saved chains, favorites, charts, or Spotify settings.</small></main>
+<script>
+(async()=>{
+ const status=document.getElementById('status'),button=document.getElementById('refresh');
+ const u='./verification.js?version-check='+Date.now();
+ try{
+  const r=await fetch(u,{cache:'no-store',redirect:'follow'});
+  if(!r.ok)throw Error('Verification script returned HTTP '+r.status);
+  const s=await r.text();
+  const current=s.includes('"Volume 1.1.1"') || s.includes("'Volume 1.1.1'");
+  status.textContent=current?'The published app contains Volume 1.1.1. Your phone may be using older cached files.':'The published script does not contain Volume 1.1.1 yet. Netlify may still be deploying an older commit; do not clear anything yet.';
+  button.disabled=!current;
+ }catch(e){status.textContent='Could not check the currently published script: '+e.message}
+ button.onclick=async()=>{
+  button.disabled=true;status.textContent='Clearing cached website files…';
+  try{
+   if('serviceWorker'in navigator){const regs=await navigator.serviceWorker.getRegistrations();await Promise.all(regs.filter(r=>r.scope.startsWith(location.origin+'/')).map(r=>r.unregister()))}
+   if('caches'in window){const keys=await caches.keys();await Promise.all(keys.filter(k=>k.startsWith('worship-chords')).map(k=>caches.delete(k)))}
+   status.textContent='Done. Reopening Worship Chords…';
+   location.replace('./?updated=1-1-1&ts='+Date.now());
+  }catch(e){status.textContent='Could not clear everything: '+e.message+' — try Safari Settings > Clear Website Data for this site only.';button.disabled=false}
+ }
+})();
+</script></body></html>
