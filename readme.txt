@@ -1,40 +1,43 @@
-WORSHIP CHORDS - CHORD VERIFICATION & SORTING UPDATE
-====================================================
+WORSHIP CHORDS — maintained source
+Repository: https://github.com/Hyphobic/churchworshipp
 
-INSTALL / UPDATE
-1. Keep your current Netlify URL. Do NOT create a new site.
-2. In Netlify: Existing site > Deploys > upload this unzipped folder (with index.html at the root).
-3. Refresh the site after deployment, or close/reopen your iPhone Home Screen app.
-4. If you still see an older version, reopen in Safari and refresh once to update the offline cache.
+Static HTML/CSS/JavaScript PWA. No build dependencies or secret environment variables.
+Preserve the original embedded book and dark burgundy/gold UI.
 
-WHAT'S NEW
-- Internet chord-source candidates pre-researched for 27 title/artist matches. They match
-  25 recordings in the original 204-track playlist. More candidates match if added later.
-- Sources from Cifra Club, AcordesWeb, and Chordify. Direct links to original websites.
-- Chord verification panel with counts for source matches, user approvals, verified recordings,
-  and missing chord sources.
-- Filter: Needs verification / Missing chords / Sources found / Approved / Verified.
-- Sort: Needs review first / Missing first / Sources first / Approved first / Title / Artist / Playlist.
-- Review page for each recording: look up across web sources, reject wrong matches, paste
-  a chord link, import a small draft progression, edit your own chart, add review notes,
-  approve, or confirm exact-recording verification.
-- Per-Spotify-recording review data. Never transfers approvals between alternate versions.
-- Export & import review history as JSON backup; charts are backed up separately in the editor.
+CLOUDFLARE PAGES SETUP
+Connect this GitHub repository; production branch main; framework None;
+build command exit 0; output directory . (repository root).
+Use the free plan. A successful GitHub commit is NOT proof of deployment.
+After deployment, compare verification.js against the deployed commit and
+open both Victoria and Entonces La Iglesia lessons on mobile.
 
-VERIFICATION POLICY
-Matching a title and performer on a chord website does not prove the album/live arrangement.
-No recording automatically receives a green Verified mark. You must explicitly confirm you
-compared that particular Spotify recording's chords, key, structures, and transitions.
-A song with only a published chart link is marked 'Chord source found - review'.
+SPOTIFY
+At developer.spotify.com/dashboard, open Chords for Church. Keep the old
+Netlify redirect URI and add the exact new HTTPS root URL, including trailing
+slash. The app derives its redirect from location.origin + location.pathname.
+Launch from the root URL, enter the existing public Client ID, reconnect, and
+check playlist sync. Never commit Client Secret, access tokens or refresh tokens.
 
-AUTOMATION LIMITATION
-Spotify provides recording metadata, not chords. This static browser app contains researched
-source links for songs checked in advance, and targeted internet search links for other tracks.
-It CANNOT automatically crawl arbitrary chord sites on every new Spotify import without a
-licensed data service and a server-side integration. An online source can be rejected or replaced.
+FIRST MIGRATION FROM THE PAUSED NETLIFY SITE
+Do not delete the old app or clear its website data.
+In the SAME Safari tab / installed PWA used before, export reviews, charts,
+and chains using their existing buttons. Those are separate backups. Import
+in the corresponding sections of the new app. The old version has no favorite
+export: record the Favorites list and re-star those recordings on the new site.
+Different Safari/PWA storage may require separate backups. This repository
+cannot read the user's phone storage or transfer it across origins automatically.
+The new backup.html combines future backups, excluding OAuth tokens.
+Do not assume a new backup.html is reachable on the old paused production site.
 
-LOCAL STORAGE
-Saved Favorites, user chord charts, Spotify authorization, and review status remain on
-this browser for the same Netlify site origin. Export backups before clearing browser data.
+RECORDING IDENTITY
+Source entries with Spotify IDs and both new study lessons match exact IDs,
+independent of playlist order. Generic source candidates remain provisional.
+Never automatically mark a recording verified. Source and study excerpts do
+not establish that a particular recorded performance matches.
 
-Keep the same URL: https://lighthearted-lily-e8552c.netlify.app/
+CHECKS / RELEASE
+Run node --check on changed JS; run node tests/migration.test.cjs.
+Keep SOURCES and source-candidates.json synchronized when editing references.
+Bump the service-worker cache on releases. refresh.html only confirms script
+availability; verify the deployed commit separately. Test offline behavior,
+Spotify callback, imports, and the two lesson dialogs after deployment.

@@ -1,5 +1,5 @@
-const CACHE_NAME='worship-chords-entonces-iglesia-002-20261020';
-const ASSETS=['./','./index.html','./spotify-sync.js','./chain-builder.js','./chord-workspace.js','./verification.js','./verification.css','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png','./icons/apple-touch-icon.png'];
+const CACHE_NAME='worship-chords-migration-20261021';
+const ASSETS=['./','./index.html','./spotify-sync.js','./chain-builder.js','./chord-workspace.js','./verification.js','./verification.css','./backup.html','./backup.js','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png','./icons/apple-touch-icon.png'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE_NAME).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE_NAME).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
