@@ -12,6 +12,11 @@
       "status": "verified",
       "label": "Recording verified by you",
       "date": "2026-10-21"
+    },
+    "sourceCheck": {
+      "status": "confirmed",
+      "checkedOn": "2026-10-21",
+      "scope": "song-level"
     }
   },
   {
@@ -28,6 +33,11 @@
       "status": "verified",
       "label": "Recording verified by you",
       "date": "2026-10-21"
+    },
+    "sourceCheck": {
+      "status": "confirmed",
+      "checkedOn": "2026-10-21",
+      "scope": "song-level"
     }
   },
   {
