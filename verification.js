@@ -79,7 +79,7 @@ window.WorshipVerification={badge,cardAction,matches,sort,count,state,candidates
   while (walker.nextNode()) {
     const node = walker.currentNode;
     if (/^\s*(?:Volume\s+0?2)\s*[·•]\s*Worship\s*$/i.test(node.nodeValue || "")) {
-      node.nodeValue = node.nodeValue.replace(/Volume\s+0?2/i, "Volume 1.1.1");
+      node.nodeValue = node.nodeValue.replace(/Volume\s+(?:0?2|1\.1(?:\.1)?)/i, "Volume 1.1.1");
       break;
     }
   }
