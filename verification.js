@@ -34,7 +34,7 @@ const STUDY_SHEETS=[{
  chords:["G13","C9","A9","D13","Em7","D#m7","Dm7","G9","C","C#dim7","G/D","A13"],
  notes:"Start with one downstroke per chord. Drill the repeated G13 to C9 movement first. Then isolate the descending Em7–D#m7–Dm7 changes and the final turnaround. The source contains additional section variations."
 },{
- n:2,title:"Entonces La Iglesia Se Alegrara en La Danza",artist:"Alabanzas Cristianas Ebenezer",album:"Alabanza y Danza",key:"Em (source key)",level:"2 / 4",
+ n:2,title:"Entonces La Iglesia Se Alegrara en La Danza",artist:"Alabanzas Cristianas Ebenezer",album:"Alabanza y Danza",key:"Em (source key)",level:"2 / 4",referenceNote:"LaCuerda transcribes Ebenezer’s Todo Adorable (2013) rendition. Your Spotify recording is Alabanzas Cristianas Ebenezer’s Alabanza y Danza release. Chords and transitions may differ.",
  source:"https://acordes.lacuerda.net/ebenezer/entonces_la_iglesia-2.shtml",
  sets:[
   ["INTRO","Em · Am · B"],
@@ -90,7 +90,7 @@ function openStudy(t){
  '<article class="study-page"><div class="study-eyebrow">SOURCE-BACKED GUITAR ARRANGEMENT</div>'+
  '<h2>'+esc(sheet.title)+'</h2><p class="study-artist">'+esc(sheet.artist)+'</p><p class="study-album">'+esc(sheet.album)+'</p>'+
  '<div class="study-meta"><span>PLAYLIST #'+String(sheet.n).padStart(3,'0')+'</span><span>REFERENCE KEY '+esc(sheet.key)+'</span><span>LEVEL '+esc(sheet.level)+'</span></div>'+
- '<p class="study-caution">Published chord chart, not verified against this exact Spotify recording. The chord fingerings below are playable suggested voicings.</p>'+
+ '<p class="study-caution">Published chord chart, not verified against this exact Spotify recording. The chord fingerings below are playable suggested voicings. '+esc(sheet.referenceNote||'')+'</p>'+
  '<section class="study-section"><h3>PRACTICE THE CHORD CHANGES</h3>'+sections+'</section>'+
  '<section class="study-section"><h3>GUITAR CHORD SHAPES</h3><div class="study-grid">'+featured.map(studyChordCard).join('')+'</div>'+
  '<details class="study-more"><summary>Show '+other.length+' more chord diagrams</summary><div class="study-grid">'+other.map(studyChordCard).join('')+'</div></details></section>'+
@@ -131,7 +131,7 @@ function draw(){const t=selected();if(!t)return;const r=entry(t),src=getSource(t
  <div class="v-help"><strong>Verification rules</strong><br>✔ Online source found = a published chart matching the song/artist, NOT the exact Spotify performance.<br>✓ Approved by you = you chose this reference for your arrangement.<br>✔ Recording verified by you = you checked the complete key, chord changes and transitions against <strong>this exact recording</strong> (including every medley section).</div>
  <div class="v-row"><strong>Current status: ${esc(s==='verified'?'Recording verified by you':s==='approved'?'Approved by you':s==='found'?'Source found — check this version':s==='review'?'Saved chart — needs review':'No chord source yet')}</strong><a href="${esc(t.spotify)}" rel="noopener noreferrer" target="_blank" style="color:#b8e2d2;font-size:12px">▶ Play this exact Spotify recording ↗</a></div>
  <div class="v-row"><strong>Published chord sources</strong>
- ${src.length?src.map((v,i)=>`<div class="v-sourcecard"><a href="${esc(v.url)}" target="_blank" rel="noopener noreferrer">${esc(v.site)} ↗ ${esc(v.title)}</a><p>Published for ${esc(v.artist)}. Recording/album match not independently confirmed. ${v.custom?'Your custom source.':''}</p>${v.preview?`<pre>${esc(v.preview)}</pre>`:''}${v.preview?`<button class="btn" data-draft="${i}">Import these starter chords as an editable draft</button>`:''}</div>`).join(''):'<p class="small">No matching published chord chart was confirmed in the initial research. Search other sources or add your own.</p>'}
+ ${src.length?src.map((v,i)=>`<div class="v-sourcecard"><a href="${esc(v.url)}" target="_blank" rel="noopener noreferrer">${esc(v.site)} ↗ ${esc(v.title)}</a><p>Published reference: ${esc(v.sourceRecording||v.artist)}. Recording/album match not independently confirmed. ${v.custom?'Your custom source.':''}</p>${v.preview?`<pre>${esc(v.preview)}</pre>`:''}${v.preview?`<button class="btn" data-draft="${i}">Import these starter chords as an editable draft</button>`:''}</div>`).join(''):'<p class="small">No matching published chord chart was confirmed in the initial research. Search other sources or add your own.</p>'}
  </div><div class="v-browselinks">${urls.map(([label,key])=>`<a href="${esc(findUrl(key,t))}" target="_blank" rel="noopener noreferrer">Search ${esc(label)} ↗</a>`).join('')}</div>
  <div class="v-divider"></div><div class="v-row"><strong>Found another chart?</strong><p class="small">Paste the direct chord-page URL, not a search results URL. It stays attached only to this Spotify recording.</p><input id="vManualUrl" class="v-input" type="url" placeholder="https://..." value="${esc(r.url||'')}"><button id="vSetUrl" class="btn" type="button" style="margin-top:8px">Save custom chord link</button></div>
  <div class="v-btnrow"><button type="button" class="btn" id="vPersonal">✎ Enter my own chords</button>${src.length?'<button type="button" class="btn" id="vReject">✕ Wrong version / reject source</button>':''}</div>
