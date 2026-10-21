@@ -19,7 +19,79 @@ function hasChart(t){return Boolean(window.WorshipCharts?.has(t.key)||t.lesson)}
 function state(t){const r=entry(t);if(r.status==='verified')return'verified';if(r.status==='approved')return'approved';if(r.declined)return hasChart(t)?'review':'missing';if(getSource(t).length)return'found';if(hasChart(t))return'review';return'missing'}
 function badge(t){const s=state(t);const found=getSource(t).length;
   return s==='verified'?'<span class="pill v-verified">✔ Recording verified by you</span>':s==='approved'?'<span class="pill v-reviewed">✓ Approved by you</span>':s==='found'?'<span class="pill v-source">↗ Chord source found · review</span>':s==='review'?'<span class="pill v-reviewed">◷ Chart needs review</span>':'<span class="pill v-missing">? Chords needed</span>'}
-function cardAction(t){return `<button type="button" class="btn v-check" data-verification="${esc(t.key)}">${state(t)==='verified'?'✓ Verification details':getSource(t).length?'Review chord source':'Check chords / verify'}</button>`}
+
+/* Source-backed memorization lesson, scoped to a single recording.
+   Chord names/progressions are study excerpts; full source stays linked. */
+const STUDY_SHEETS=[{
+ n:1,title:"Victoria",artist:"Abel Brito",album:"Es Hora de Adorarle",key:"G (source reference)",level:"3 / 4",
+ source:"https://acordes.lacuerda.net/abel_brito/victoria.shtml",
+ sets:[
+  ["INTRO / CHORUS","G13 · C9 · G13 · C9"],
+  ["CHORUS CONTINUATION","G13 · A9 · D13"],
+  ["PASSING CHORDS","Em7 · D#m7 · Dm7 · G9 · C · C#dim7"],
+  ["RESOLUTION","G/D · Em7 · A13 · D13 · G13"]
+ ],
+ chords:["G13","C9","A9","D13","Em7","D#m7","Dm7","G9","C","C#dim7","G/D","A13"],
+ notes:"Start with one downstroke per chord. Drill the repeated G13 to C9 movement first. Then isolate the descending Em7–D#m7–Dm7 changes and the final turnaround. The source contains additional section variations."
+}];
+const STUDY_SHAPES={
+ "G13":"3x345x","C9":"x32333","A9":"x02423","D13":"x54557",
+ "Em7":"022030","D#m7":"x68676","Dm7":"xx0211","G9":"3x3201",
+ "C":"x32010","C#dim7":"x4535x","G/D":"xx0003","A13":"x05422"
+};
+function studySheet(t){return STUDY_SHEETS.find(v=>t&&t.n===v.n&&normalizedTitle(t.title)===normalizedTitle(v.title)&&norm(t.artist).includes(norm(v.artist)))}
+let studyModal=null,studyReturnFocus=null;
+function studyChordCard(name){
+ const shape=STUDY_SHAPES[name];if(!shape)return '';
+ const frets=shape.split('').map(x=>x==='x'?-1:Number(x));
+ const sounding=frets.filter(x=>x>0);
+ const first=Math.max(...sounding)>4?Math.min(...sounding):1;
+ let drawing='';
+ for(let i=0;i<6;i++)drawing+='<line x1="'+(24+i*28)+'" y1="34" x2="'+(24+i*28)+'" y2="138" stroke="#9aa9a2" stroke-width="1"/>';
+ for(let i=0;i<5;i++)drawing+='<line x1="24" y1="'+(34+i*26)+'" x2="164" y2="'+(34+i*26)+'" stroke="#9aa9a2" stroke-width="'+(i===0&&first===1?'3':'1')+'"/>';
+ for(let i=0;i<6;i++){
+   let x=24+i*28,k=frets[i];
+   if(k===-1)drawing+='<text x="'+x+'" y="24" font-size="17" text-anchor="middle" fill="#a55366">×</text>';
+   else if(k===0)drawing+='<circle cx="'+x+'" cy="17" r="6" stroke="#51867e" fill="none" stroke-width="2"/>';
+   else drawing+='<circle cx="'+x+'" cy="'+(34+(k-first+.5)*26)+'" r="9" fill="#874d61"/>';
+ }
+ if(first>1)drawing+='<text x="170" y="51" font-size="10" fill="#59716b">'+first+'fr</text>';
+ return '<div class="study-chord"><strong>'+esc(name)+'</strong><svg role="img" aria-label="'+esc(name)+' guitar chord diagram" viewBox="0 0 188 157">'+drawing+'</svg><small>'+esc(shape)+'</small></div>';
+}
+function closeStudy(){if(!studyModal)return;studyModal.hidden=true;document.body.classList.remove('lock');if(studyReturnFocus&&studyReturnFocus.isConnected)studyReturnFocus.focus()}
+function openStudy(t){
+ const sheet=studySheet(t);if(!sheet)return;
+ studyReturnFocus=document.activeElement;
+ if(!studyModal){
+  studyModal=document.createElement('div');
+  studyModal.id='vStudyModal';studyModal.hidden=true;
+  studyModal.setAttribute('role','dialog');studyModal.setAttribute('aria-modal','true');
+  studyModal.setAttribute('aria-label','Guitar chord study sheet');
+  document.body.append(studyModal);
+  studyModal.addEventListener('click',e=>{if(e.target===studyModal)closeStudy()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!studyModal.hidden)closeStudy()});
+ }
+ const featured=sheet.chords.slice(0,5),other=sheet.chords.slice(5);
+ const sections=sheet.sets.map(s=>'<div class="study-step"><span>'+esc(s[0])+'</span><strong>'+esc(s[1])+'</strong></div>').join('');
+ studyModal.innerHTML='<div class="study-wrap"><div class="study-toolbar"><strong>Recording #'+String(sheet.n).padStart(3,'0')+' · Study sheet</strong><button type="button" id="studyExit">✕ Close</button></div>'+
+ '<article class="study-page"><div class="study-eyebrow">SOURCE-BACKED GUITAR ARRANGEMENT</div>'+
+ '<h2>'+esc(sheet.title)+'</h2><p class="study-artist">'+esc(sheet.artist)+'</p><p class="study-album">'+esc(sheet.album)+'</p>'+
+ '<div class="study-meta"><span>PLAYLIST #'+String(sheet.n).padStart(3,'0')+'</span><span>REFERENCE KEY '+esc(sheet.key)+'</span><span>LEVEL '+esc(sheet.level)+'</span></div>'+
+ '<p class="study-caution">Published chord chart, not verified against this exact Spotify recording. The chord fingerings below are playable suggested voicings.</p>'+
+ '<section class="study-section"><h3>PRACTICE THE CHORD CHANGES</h3>'+sections+'</section>'+
+ '<section class="study-section"><h3>GUITAR CHORD SHAPES</h3><div class="study-grid">'+featured.map(studyChordCard).join('')+'</div>'+
+ '<details class="study-more"><summary>Show '+other.length+' more chord diagrams</summary><div class="study-grid">'+other.map(studyChordCard).join('')+'</div></details></section>'+
+ '<section class="study-section"><h3>PLAYING NOTES</h3><p class="study-notes">'+esc(sheet.notes)+'</p></section>'+
+ '<div class="study-source"><strong>Published song-level chord reference</strong><p>Full original chart and section timing remain at LaCuerda. Album-specific changes need your approval.</p>'+
+ '<a href="'+esc(sheet.source)+'" rel="noopener noreferrer" target="_blank">OPEN FULL CHORD CHART ↗</a>'+
+ (t.spotify?'<p><a href="'+esc(t.spotify)+'" rel="noopener noreferrer" target="_blank">LISTEN TO THIS SPOTIFY RECORDING ↗</a></p>':'')+'</div>'+
+ '<p class="study-caption">Suggested fingerings · X = mute · ○ = open · dots = fretted strings (low E to high e). Source found ≠ verified recording.</p></article></div>';
+ studyModal.hidden=false;document.body.classList.add('lock');
+ document.getElementById('studyExit').onclick=closeStudy;
+ document.getElementById('studyExit').focus();
+}
+
+function cardAction(t){return `<button type="button" class="btn v-check" data-verification="${esc(t.key)}">${state(t)==='verified'?'✓ Verification details':getSource(t).length?'Review chord source':'Check chords / verify'}</button>`+(studySheet(t)?'<button type="button" class="btn study-launch" data-study-lesson="'+esc(t.key)+'">View guitar chords</button>':'')}
 function matches(t){const f=filters?.value||'all';const s=state(t);return f==='all'||f==='review'&&['found','review'].includes(s)||f==='missing'&&s==='missing'||f==='found'&&getSource(t).length>0||f==='approved'&&s==='approved'||f==='verified'&&s==='verified'}
 const ranks={found:0,review:1,missing:2,approved:3,verified:4};
 function sort(a,b){let by=sorter?.value||'playlist';const compare=(x,y)=>String(x||'').localeCompare(String(y||''),'es',{sensitivity:'base'});
@@ -67,7 +139,7 @@ function draw(){const t=selected();if(!t)return;const r=entry(t),src=getSource(t
 }
 function open(key){active=key;const t=selected();if(!t)return;dialog.hidden=false;document.body.classList.add('lock');draw();$('vClose')?.focus()}
 function close(){dialog.hidden=true;document.body.classList.remove('lock')}
-$('songlist').addEventListener('click',event=>{const btn=event.target.closest('[data-verification]');if(btn)open(btn.dataset.verification)});
+$('songlist').addEventListener('click',event=>{const lesson=event.target.closest('[data-study-lesson]');if(lesson){const t=tracks.find(t=>t.key===lesson.dataset.studyLesson);if(t)openStudy(t);return}const btn=event.target.closest('[data-verification]');if(btn)open(btn.dataset.verification)});
 filters.addEventListener('change',render);sorter.addEventListener('change',render);
 $('vBackup').onclick=()=>{const content=JSON.stringify({app:'Worship Chords Verification',version:1,exportedAt:new Date().toISOString(),reviews:reviewData},null,2);const url=URL.createObjectURL(new Blob([content],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='worship-chords-verification-reviews.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
 $('vImport').addEventListener('change',async e=>{const f=e.target.files?.[0];if(!f)return;try{const data=JSON.parse(await f.text());if(data.app!=='Worship Chords Verification'||data.version!==1||!data.reviews||typeof data.reviews!=='object'||Array.isArray(data.reviews))throw Error('Not a Worship Chords review backup');let n=0;for(const [k,v] of Object.entries(data.reviews)){if(!/^[a-zA-Z0-9_-]{8,80}#[0-9]{1,5}$/.test(k)||!v||typeof v!=='object')continue;const clean={status:['approved','verified'].includes(v.status)?v.status:'',declined:!!v.declined,url:String(v.url||'').slice(0,1200),site:String(v.site||'').slice(0,100),notes:String(v.notes||'').slice(0,4000),updated:Date.now()};if(clean.url&&!/^https:\/\//.test(clean.url))clean.url='';reviewData[k]=clean;n++;}save();render();alert(n+' review records imported. Your charts are stored in a separate backup.')}catch(err){alert('Import failed: '+err.message)}finally{e.target.value=''}});
