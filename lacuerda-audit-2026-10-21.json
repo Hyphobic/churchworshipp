@@ -6,9 +6,9 @@
   "additionalSpotifyTracksObserved": 2,
   "sourceCandidatesAdded": 123,
   "existingCandidatesUpdated": 0,
-  "matchedOriginal": 120,
+  "matchedOriginal": 122,
   "partialOriginal": 2,
-  "unlocatedOriginal": 82,
+  "unlocatedOriginal": 80,
   "recordings": [
     {
       "n": 1,
@@ -16,8 +16,8 @@
       "artist": "Abel Brito",
       "album": "Es Hora de Adorarle",
       "spotifyTrackId": "7dfkOys2ycCJcqHHLbcKMt",
-      "status": "no-confirmed-lacuerda-source-in-this-pass",
-      "url": null
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/abel_brito/victoria.shtml"
     },
     {
       "n": 2,
@@ -25,8 +25,8 @@
       "artist": "Alabanzas Cristianas Ebenezer",
       "album": "Alabanza y Danza",
       "spotifyTrackId": "3YXYBATD78SlSo0OtB4LkR",
-      "status": "no-confirmed-lacuerda-source-in-this-pass",
-      "url": null
+      "status": "lacuerda-song-chart-located",
+      "url": "https://acordes.lacuerda.net/ebenezer/entonces_la_iglesia-2.shtml"
     },
     {
       "n": 3,
