@@ -7,7 +7,12 @@
     "key": "G",
     "preview": "Chorus: G13 C9 G13 C9 · G13 A9 D13\nEnding: G/D Em7 A13 D13 G13",
     "playlistIndex": 1,
-    "spotifyTrackId": "7dfkOys2ycCJcqHHLbcKMt"
+    "spotifyTrackId": "7dfkOys2ycCJcqHHLbcKMt",
+    "verification": {
+      "status": "verified",
+      "label": "Recording verified by you",
+      "date": "2026-10-21"
+    }
   },
   {
     "title": "Entonces La Iglesia Se Alegrara en La Danza",
@@ -18,7 +23,12 @@
     "preview": "Intro/verse: Em Am B\nChorus: Am D G (F# bass) Em B\nEnding: Am D G (F# bass) Em B Em",
     "playlistIndex": 2,
     "spotifyTrackId": "3YXYBATD78SlSo0OtB4LkR",
-    "sourceRecording": "Ebenezer — Todo Adorable (2013); not verified against this Spotify release"
+    "sourceRecording": "Ebenezer · Todo Adorable (2013); playlist track is a distinct recording.",
+    "verification": {
+      "status": "verified",
+      "label": "Recording verified by you",
+      "date": "2026-10-21"
+    }
   },
   {
     "title": "Ven Espíritu Santo",

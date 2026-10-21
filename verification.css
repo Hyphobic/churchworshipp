@@ -40,6 +40,7 @@
 #vStudyModal .study-source p{font-size:12px;color:#526e62;line-height:1.5;margin:9px 0}
 #vStudyModal .study-source a{color:#286c64;font-weight:800;font-size:13px;text-decoration:underline;overflow-wrap:anywhere}
 #vStudyModal .study-caution{background:#f2eadd;border-left:3px solid #cba872;padding:10px 12px;border-radius:4px;font-size:12px;line-height:1.6;color:#7b5843}
+#vStudyModal .study-caution.study-verified{background:#e3f0e4;border-left-color:#588a65;color:#2f5e3a}
 #vStudyModal .study-caption{font-size:11px;color:#68766e;margin:20px 0 0}
 @media(max-width:520px){#vStudyModal .study-page{padding:18px 13px}#vStudyModal .study-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#vStudyModal .study-step{grid-template-columns:31% 1fr}#vStudyModal .study-meta{gap:5px}#vStudyModal .study-meta span{font-size:10px;padding:10px 5px}}
 @media print{#vStudyModal{position:static;background:white;overflow:visible;padding:0}#vStudyModal .study-toolbar{display:none}#vStudyModal .study-page{box-shadow:none}}

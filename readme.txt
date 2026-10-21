@@ -34,6 +34,10 @@ Source entries with Spotify IDs and both new study lessons match exact IDs,
 independent of playlist order. Generic source candidates remain provisional.
 Never automatically mark a recording verified. Source and study excerpts do
 not establish that a particular recorded performance matches.
+OWNER VERIFICATIONS live in the repo: add a "verification" object
+({status, label, date}) to an exact-Spotify-ID entry in SOURCES and in
+source-candidates.json, only after the owner says they checked that recording.
+It shows on every device; a local review on a device overrides it.
 
 CHECKS / RELEASE
 Run node --check on changed JS; run node tests/migration.test.cjs.

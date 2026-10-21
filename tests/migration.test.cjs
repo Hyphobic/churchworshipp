@@ -16,4 +16,11 @@ assert.throws(()=>vm.runInContext("validateBackup({app:'Worship Chords Full Back
 vm.runInContext("validateBackup({app:'Worship Chords Full Backup',version:1,values:{'worship-chords-favorites-v1':'[\"track#1\"]'}})",context);
 const data=new Map([['a','old']]);let failed=false;context.storage={getItem:k=>data.get(k)??null,setItem:(k,v)=>{if(k==='b'&&!failed){failed=true;throw Error('quota')}data.set(k,v)},removeItem:k=>data.delete(k)};
 assert.throws(()=>vm.runInContext("restoreBackup(storage,{a:'new',b:'new'})",context));assert.equal(data.get('a'),'old');assert.equal(data.has('b'),false);
-console.log('Passed: stable lesson identity, wrong-recording exclusion, backup validation, token exclusion, rollback.');
+const repoSources=JSON.parse(fs.readFileSync('source-candidates.json','utf8'));
+for(const id of ['7dfkOys2ycCJcqHHLbcKMt','3YXYBATD78SlSo0OtB4LkR']){
+ const inApp=vm.runInContext('SOURCES',context).find(s=>s.spotifyTrackId===id),inJson=repoSources.find(s=>s.spotifyTrackId===id);
+ assert.deepEqual({...inApp.verification},{status:'verified',label:'Recording verified by you',date:'2026-10-21'});
+ assert.deepEqual({...inApp.verification},inJson.verification);
+}
+assert.equal(vm.runInContext('SOURCES',context).filter(s=>s.verification).length,2);
+console.log('Passed: stable lesson identity, wrong-recording exclusion, backup validation, token exclusion, rollback, repo verifications.');
