@@ -175,5 +175,15 @@ window.WorshipVerification={badge,cardAction,matches,sort,count,state,candidates
     }
   }
 })();
+(function setPersonalLibraryHeading() {
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  let node;
+  while ((node = walker.nextNode())) {
+    if (/^\s*MY\s+GUITAR\s+LIBRARY\s*$/i.test(node.nodeValue || "")) {
+      node.nodeValue = node.nodeValue.replace(/MY\s+GUITAR\s+LIBRARY/i, "JOSE’S GUITAR LIBRARY");
+      break;
+    }
+  }
+})();
 render();
 })();
