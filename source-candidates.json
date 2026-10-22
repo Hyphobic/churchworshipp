@@ -721,22 +721,6 @@
     "sourceRecording": "Published song-level arrangement; recording-specific key, structure and modulations have not been independently checked."
   },
   {
-    "title": "Así Como María (Becerros de Manada)",
-    "artist": "Fernel Monroy",
-    "album": "Salmodiando en Las Naciones",
-    "url": "https://acordes.lacuerda.net/fernel_monroy/asi_como_maria.shtml",
-    "site": "LaCuerda",
-    "playlistIndex": 66,
-    "spotifyTrackId": "1jBLZ5wo6fCSlaBB8AD2xo",
-    "sourceArtist": "fernel monroy",
-    "sourceCheck": {
-      "status": "partial",
-      "checkedOn": "2026-10-21",
-      "scope": "section-only"
-    },
-    "sourceRecording": "This reference may cover only part of the recorded medley; verify all sections."
-  },
-  {
     "title": "Remolineando (Versión Original con Shofar)",
     "artist": "Fernel Monroy",
     "album": "Salmodiando en Las Naciones",
@@ -1311,22 +1295,6 @@
       "scope": "song-level"
     },
     "sourceRecording": "Published song-level arrangement; recording-specific key, structure and modulations have not been independently checked."
-  },
-  {
-    "title": "Jehová Es Mi Guerrero/Le Llaman (Reprise) - En Vivo",
-    "artist": "Juan Carlos Alvarado",
-    "album": "Fuego",
-    "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/jehova_es_mi_guerrero.shtml",
-    "site": "LaCuerda",
-    "playlistIndex": 118,
-    "spotifyTrackId": "5IsqUSeMnxmoEdX9Ooot0r",
-    "sourceArtist": "juan carlos alvarado",
-    "sourceCheck": {
-      "status": "partial",
-      "checkedOn": "2026-10-21",
-      "scope": "section-only"
-    },
-    "sourceRecording": "This reference may cover only part of the recorded medley; verify all sections."
   },
   {
     "title": "Eres Señor Vencedor - En Vivo",
