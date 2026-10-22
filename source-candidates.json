@@ -1,5 +1,44 @@
 [
   {
+    "title": "Los Carros De Faraón (Popurri)",
+    "artist": "Alabanza Vida Nueva",
+    "album": "Sucot",
+    "url": "https://www.e-chords.com/chords/alabanza-vida-nueva/los-carros-de-faraon-popurri",
+    "site": "E-Chords",
+    "key": "Dm",
+    "preview": "LOS CARROS: Dm C Bb A Dm\nLOS MUROS: Dm C Dm\nGRANDE ES EL SEÑOR: Dm Gm A Gm Dm/F A/E Dm",
+    "playlistIndex": 10,
+    "spotifyTrackId": "6o2XvvgBlqh8jM6sCDUZGL",
+    "sourceCheck": {
+      "status": "confirmed",
+      "scope": "full-medley-song-level",
+      "checkedOn": "2026-10-21",
+      "sections": [
+        "Los Carros de Faraón",
+        "Los Muros Caen",
+        "Grande es el Señor"
+      ]
+    },
+    "sourceRecording": "Published full multi-section medley arrangement by Alabanza Vida Nueva. Exact Spotify performance has not been checked."
+  },
+  {
+    "title": "Los Carros De Faraón (Popurri)",
+    "artist": "Alabanza Vida Nueva",
+    "album": "Sucot",
+    "url": "https://es.ultimate-guitar.com/tab/6562409",
+    "site": "Ultimate Guitar",
+    "key": "",
+    "preview": "",
+    "playlistIndex": 10,
+    "spotifyTrackId": "6o2XvvgBlqh8jM6sCDUZGL",
+    "sourceCheck": {
+      "status": "user-submitted",
+      "scope": "medley-chart-not-independently-readable",
+      "checkedOn": "2026-10-21"
+    },
+    "sourceRecording": "Provided directly by the playlist owner; the tab contents could not be accessed independently. Verify it covers the complete medley before marking the recording verified."
+  },
+  {
     "title": "Victoria",
     "artist": "Abel Brito",
     "url": "https://acordes.lacuerda.net/abel_brito/victoria.shtml",
