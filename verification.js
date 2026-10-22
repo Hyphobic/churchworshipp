@@ -54,14 +54,79 @@ const STUDY_SHEETS=[{
  ],
  chords:["Em","Am","B","D","G","G/F#","E","F#m","G#"],
  notes:"Start with Em → Am → B until you can change without stopping. The chorus adds Am → D → G → Em → B. Practice the G to F# bass walk to Em slowly. The parentheses in the published chart describe passing movement; listen to your specific Spotify recording before treating every passing note as a full strummed chord. B and F#m use barre shapes."
+},{
+ n:3,spotifyTrackId:"3GfRe2Ftsm33pv53c5dLt0",title:"Las Riquezas y Gloria Proceden Ti",artist:"Alabanzas Cristianas Ebenezer",album:"Alabanza y Danza",key:"Em (LaCuerda reference)",level:"2 / 4",
+ source:"https://acordes.lacuerda.net/ebenezer/las_riquezas_y_la_gloria.shtml",
+ sets:[
+  ["SECTION A · PRACTICE","Em · B · Em"],
+  ["SECTION A · REPEAT","Em · B · Em"],
+  ["SECTION B · PRACTICE","Em · D · Em"],
+  ["SECTION B · RESOLUTION","Em · G · Am · B · (Em)"]
+ ],
+ chords:["Em","B","D","G","Am"],
+ notes:"Start with Em → B → Em and aim for clean changes. Then drill Em → D → Em. Finish by joining Em → G → Am → B → Em. The B major barre shape is the hardest change; slow it down before increasing tempo.",
+ referenceNote:"The source calls this song “Las riquezas y la gloria” by Ebenezer in Em. SECTION A/B are practice groupings, not confirmed recording timestamps; listen to the exact Spotify track for repeats and transitions."
+
 }];
 const STUDY_SHAPES={
  "G13":"3x345x","C9":"x32333","A9":"x02423","D13":"x54557",
  "Em7":"022030","D#m7":"x68676","Dm7":"xx0211","G9":"3x3201",
  "C":"x32010","C#dim7":"x4535x","G/D":"xx0003","A13":"x05422",
- "Em":"022000","Am":"x02210","B":"x24442","D":"xx0232","G":"320003","G/F#":"2x0003","E":"022100","F#m":"244222","G#":"466544"
+ "Em":"022000","Am":"x02210","B":"x24442","D":"xx0232","G":"320003","G/F#":"2x0003","E":"022100","F#m":"244222","G#":"466544",
+ "A":"x02220","A7":"x02020","Am7":"x02010","B7":"x21202","Bm":"x24432","Bm7":"x24232","Bb":"x13331","Bbmaj7":"x13231","Cmaj7":"x32000","Cm":"x35543","Cm7":"x35343","C#m":"x46654","D7":"xx0212","Dm":"xx0231","Dm7":"xx0211","E7":"020100","Eb":"x65343","F":"133211","Fm":"133111","Fmaj7":"xx3210","F#m7":"242222","G7":"320001","Gm":"355333","G/B":"x20003","Ab":"466544","C/G":"332010"
 };
-function studySheet(t){return STUDY_SHEETS.find(v=>t&&recordingId(t)===v.spotifyTrackId)}
+/* Automatic per-recording visual lessons: only sourced chord data is rendered.
+   No CORS scraping, fabricated progressions, or cross-recording approvals. */
+const STUDY_SECTION = /^(?:intro|verse|verso|chorus|coro|refr[aá]n|pre.?chorus|bridge|puente|outro|ending|end|final|section|secci[oó]n|vamp|instrumental|main chords|reported chords|progression|acordes)(?:\s*\/\s*(?:intro|verse|chorus|verso|coro))?\s*(?:\d+)?$/i;
+const STUDY_CHORD = /^[A-G](?:#|b)?(?:(?:m|M|maj|min|dim|aug|sus|add)\d*|[0-9]+|(?:sus|add)[0-9]+)?(?:\/[A-G](?:#|b)?)?$/;
+function parseStudyProgressions(raw){
+ const rows=[];const chords=[];
+ for(const originalLine of String(raw||'').split(/\r?\n/).slice(0,100)){
+  const line=originalLine.trim();if(!line||/^\[Review this/i.test(line))continue;
+  const labelMatch=line.match(/^([^:]{1,40}):\s*(.+)$/);
+  let label="CHORD PROGRESSION", progression=line;
+  if(labelMatch){
+   if(!STUDY_SECTION.test(labelMatch[1].trim()))continue;
+   label=labelMatch[1].trim().toUpperCase();progression=labelMatch[2].trim();
+  }
+  const tokens=progression.replace(/[·|,]/g,' ').split(/\s+/).map(x=>x.replace(/^[([{]+|[)\]}]+$/g,'')).filter(Boolean);
+  const accepted=tokens.filter(x=>STUDY_CHORD.test(x));
+  if(accepted.length<2 || accepted.length/tokens.length<.65)continue;
+  rows.push([label,accepted.join(' · ')]);
+  for(const chord of accepted)if(!chords.includes(chord))chords.push(chord);
+  if(rows.length>=15)break;
+ }
+ return {sets:rows,chords:chords.slice(0,24)};
+}
+function generatedStudySheet(t){
+ if(!t||!['approved','verified'].includes(state(t)))return null;
+ const candidatesForRecording=getSource(t);
+ const source=candidatesForRecording.find(x=>x.sourceCheck?.scope!=='section-only');
+ const savedChart=window.WorshipCharts?.all?.()?.[t.key];
+ if(!source&&!savedChart?.body)return null;
+ const own=Boolean(savedChart?.body),raw=own?savedChart.body:(source?.preview||'');
+ const parsed=parseStudyProgressions(raw);
+ const hasMusic=parsed.sets.length>0;
+ const key=(own?savedChart.key:source?.key)||'Not documented';
+ const notes=hasMusic?
+   'Study each supplied chord progression slowly. Diagram fingerings are suggestions; compare every section, repeat and key change against your actual Spotify recording.':
+   'The source link is saved, but the app does not have its chord progression data yet. Open the published source and enter the actual section-by-section chords in My chord editor. This sheet will fill in automatically after you save the chart.';
+ return {n:t.n,spotifyTrackId:recordingId(t),title:t.title,artist:t.artist,album:t.album,
+  key:key+' (source reference)',level:'Not rated',source:source?.url||'',
+  sets:hasMusic?parsed.sets:[['CHORD PROGRESSION NEEDED','Open the linked chart and enter the actual chords to complete this lesson']],
+  chords:parsed.chords,notes,autoGenerated:true,hasMusic,
+  referenceNote:own?'Built from your locally saved chord chart. Changes to that chart remain device-specific until backed up.':
+   'Auto-generated from chord metadata saved in this app; it does not fetch or transcribe the third-party web page or verify this exact Spotify performance.'};
+}
+function studySheet(t){
+ if(!t)return null;
+ const stored=STUDY_SHEETS.find(v=>recordingId(t)===v.spotifyTrackId);
+ const custom=entry(t);
+ const manuallySelected=custom.url&&stored&&custom.url!==stored.source;
+ if(stored&&!custom.declined&&!manuallySelected)return stored;
+ return generatedStudySheet(t);
+}
+window.WorshipStudySheetTemplate={parsePreview:parseStudyProgressions,generate:generatedStudySheet,forTrack:studySheet};
 let studyModal=null,studyReturnFocus=null;
 function studyChordCard(name){
  const shape=STUDY_SHAPES[name];if(!shape)return '';
@@ -94,26 +159,31 @@ function openStudy(t){
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!studyModal.hidden)closeStudy()});
  }
  const featured=sheet.chords.slice(0,5),other=sheet.chords.slice(5);
- const sections=sheet.sets.map(s=>'<div class="study-step"><span>'+esc(s[0])+'</span><strong>'+esc(s[1])+'</strong></div>').join('');
+ const sections=sheet.sets.map(row=>'<div class="study-step"><span>'+esc(row[0])+'</span><strong>'+esc(row[1])+'</strong></div>').join('');
+ const diagramBlock=featured.length?'<div class="study-grid">'+featured.map(studyChordCard).join('')+'</div>'+
+ (other.length?'<details class="study-more"><summary>Show '+other.length+' more chord diagrams</summary><div class="study-grid">'+other.map(studyChordCard).join('')+'</div></details>':''):
+ '<p class="study-notes">Chord diagrams will appear once a real progression is saved. No chords have been guessed.</p>';
+ const editBlock=sheet.autoGenerated?'<button class="btn study-edit" type="button" id="studyEdit">✎ Enter chord progressions to finish this sheet</button>':'';
  studyModal.innerHTML='<div class="study-wrap"><div class="study-toolbar"><strong>Recording #'+String(t.n).padStart(3,'0')+' · Study sheet</strong><button type="button" id="studyExit">✕ Close</button></div>'+
  '<article class="study-page"><div class="study-eyebrow">SOURCE-BACKED GUITAR ARRANGEMENT</div>'+
  '<h2>'+esc(sheet.title)+'</h2><p class="study-artist">'+esc(sheet.artist)+'</p><p class="study-album">'+esc(sheet.album)+'</p>'+
  '<div class="study-meta"><span>PLAYLIST #'+String(t.n).padStart(3,'0')+'</span><span>REFERENCE KEY '+esc(sheet.key)+'</span><span>LEVEL '+esc(sheet.level)+'</span></div>'+
  (state(t)==='verified'?'<p class="study-caution study-verified">✔ Recording verified by you'+(verifiedDate(t)?' · '+esc(verifiedDate(t)):'')+'. You checked these chords against this exact Spotify recording. The chord fingerings below are playable suggested voicings. '+esc(sheet.referenceNote||'')+'</p>':'<p class="study-caution">Published chord chart, not verified against this exact Spotify recording. The chord fingerings below are playable suggested voicings. '+esc(sheet.referenceNote||'')+'</p>')+
  '<section class="study-section"><h3>PRACTICE THE CHORD CHANGES</h3>'+sections+'</section>'+
- '<section class="study-section"><h3>GUITAR CHORD SHAPES</h3><div class="study-grid">'+featured.map(studyChordCard).join('')+'</div>'+
- '<details class="study-more"><summary>Show '+other.length+' more chord diagrams</summary><div class="study-grid">'+other.map(studyChordCard).join('')+'</div></details></section>'+
+ '<section class="study-section"><h3>GUITAR CHORD SHAPES</h3>'+diagramBlock+editBlock+'</section>'+
  '<section class="study-section"><h3>PLAYING NOTES</h3><p class="study-notes">'+esc(sheet.notes)+'</p></section>'+
- '<div class="study-source"><strong>Published song-level chord reference</strong><p>Full original chart and section timing remain at LaCuerda. '+(state(t)==='verified'?'You verified this chart against this recording.':'Album-specific changes need your approval.')+'</p>'+
- '<a href="'+esc(sheet.source)+'" rel="noopener noreferrer" target="_blank">OPEN FULL CHORD CHART ↗</a>'+
+ '<div class="study-source"><strong>'+(sheet.autoGenerated?'Approved source · automatically created lesson':'Published song-level chord reference')+'</strong><p>'+(sheet.autoGenerated?'Only chord progressions saved in the app are shown. Open the original source for its complete arrangement.':('Full original chart and section timing remain with the publisher. '+(state(t)==='verified'?'You verified this chart against this recording.':'Album-specific changes need your approval.')))+'</p>'+
+ (sheet.source?'<a href="'+esc(sheet.source)+'" rel="noopener noreferrer" target="_blank">OPEN FULL CHORD CHART ↗</a>':'<p>Using your own locally saved chart.</p>')+
  (t.spotify?'<p><a href="'+esc(t.spotify)+'" rel="noopener noreferrer" target="_blank">LISTEN TO THIS SPOTIFY RECORDING ↗</a></p>':'')+'</div>'+
  '<p class="study-caption">Suggested fingerings · X = mute · ○ = open · dots = fretted strings (low E to high e). Source found ≠ verified recording.</p></article></div>';
  studyModal.hidden=false;document.body.classList.add('lock');
  document.getElementById('studyExit').onclick=closeStudy;
+ const editor=document.getElementById('studyEdit');
+ if(editor)editor.onclick=()=>{closeStudy();window.WorshipCharts?.open(t.key)};
  document.getElementById('studyExit').focus();
 }
 
-function cardAction(t){return `<button type="button" class="btn v-check" data-verification="${esc(t.key)}">${state(t)==='verified'?'✓ Verification details':getSource(t).length?'Review chord source':'Check chords / verify'}</button>`+(studySheet(t)?'<button type="button" class="btn study-launch" data-study-lesson="'+esc(t.key)+'">View guitar chords</button>':'')}
+function cardAction(t){return `<button type="button" class="btn v-check" data-verification="${esc(t.key)}">${state(t)==='verified'?'✓ Verification details':getSource(t).length?'Review chord source':'Check chords / verify'}</button>`+(studySheet(t)?'<button type="button" class="btn study-launch" data-study-lesson="'+esc(t.key)+'">'+(studySheet(t).autoGenerated&&!studySheet(t).hasMusic?'Complete guitar sheet':'View guitar chords')+'</button>':'')}
 function matches(t){const f=filters?.value||'all';const s=state(t);return f==='all'||f==='review'&&['found','review'].includes(s)||f==='missing'&&s==='missing'||f==='found'&&getSource(t).length>0||f==='lacuerda'&&Boolean(lacuerdaMatch(t))||f==='approved'&&s==='approved'||f==='verified'&&s==='verified'}
 const ranks={found:0,review:1,missing:2,approved:3,verified:4};
 function sort(a,b){let by=sorter?.value||'playlist';const compare=(x,y)=>String(x||'').localeCompare(String(y||''),'es',{sensitivity:'base'});
@@ -146,13 +216,14 @@ function draw(){const t=selected();if(!t)return;const r=entry(t),src=getSource(t
  <div class="v-divider"></div><div class="v-row"><strong>Found another chart?</strong><p class="small">Paste the direct chord-page URL, not a search results URL. It stays attached only to this Spotify recording.</p><input id="vManualUrl" class="v-input" type="url" placeholder="https://..." value="${esc(r.url||'')}"><button id="vSetUrl" class="btn" type="button" style="margin-top:8px">Save custom chord link</button></div>
  <div class="v-btnrow"><button type="button" class="btn" id="vPersonal">✎ Enter my own chords</button>${src.length?'<button type="button" class="btn" id="vReject">✕ Wrong version / reject source</button>':''}</div>
  <div class="v-divider"></div><div class="v-row"><strong>My review decision</strong><p class="small">Save an approval for this recording only. An approval is not a claim that anyone else verified the music.</p><textarea class="v-input" rows="2" id="vNotes" placeholder="Key change at 2:10; chorus from a different version…">${esc(r.notes||'')}</textarea></div>
- <div class="v-btnrow"><button type="button" id="vApprove" class="btn primary">✓ Approve as my reference</button><button type="button" id="vClear" class="btn">Reset my review</button></div>
+ <div class="v-btnrow"><button type="button" id="vApprove" class="btn primary">✓ Approve as my reference</button><button type="button" id="vClear" class="btn">Reset my review</button>${studySheet(t)?'<button type="button" class="btn study-launch" id="vOpenStudy">♬ '+(studySheet(t).autoGenerated&&!studySheet(t).hasMusic?'Finish guitar sheet':'View guitar chords')+'</button>':''}</div>
  <label class="v-checkline"><input type="checkbox" id="vVerifiedBox"><span>I personally checked the chords, key, structure, and any modulations/medley segments against <strong>this exact Spotify recording</strong>. This chart is performance-ready.</span></label>
  <div class="v-btnrow"><button type="button" id="vConfirmVerified" class="btn" style="border-color:#588a65;color:#bdedc2">✔ Mark recording verified</button></div>
  <p class="v-warning" id="vFeedback" role="status">No recording is marked automatically verified based on a third-party chord website.</p>
  </div>`;
  $('vClose').onclick=close;
  $('vPersonal').onclick=()=>{close();window.WorshipCharts?.open(t.key)};
+ if($('vOpenStudy'))$('vOpenStudy').onclick=()=>{close();openStudy(t)};
  $('vSetUrl').onclick=()=>{const raw=$('vManualUrl').value.trim();try{const u=new URL(raw);if(u.protocol!=='https:'||!u.hostname.includes('.'))throw Error();change(t,{url:u.href,site:u.hostname,declined:false,status:'',notes:$('vNotes').value});$('vFeedback').textContent='Custom source saved. Confirm exact recording before verifying.'}catch(_){$('vFeedback').textContent='Enter a complete HTTPS URL to the chord page.'}};
  if($('vReject'))$('vReject').onclick=()=>{change(t,{declined:true,status:'',notes:$('vNotes').value})};
  dialog.querySelectorAll('[data-draft]').forEach(btn=>btn.onclick=()=>{const v=src[Number(btn.dataset.draft)];close();window.WorshipCharts?.prefill(t.key,{body:v.preview+'\n\n[Review this against your Spotify recording before performing]',key:v.key,label:'Draft · '+v.site});});
