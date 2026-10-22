@@ -28,7 +28,7 @@ function getSource(t){const saved=entry(t);if(saved.url&&saved.declined!==true)r
 function hasChart(t){return Boolean(window.WorshipCharts?.has(t.key)||t.lesson)}
 function state(t){const r=entry(t);if(r.status==='verified')return'verified';if(r.status==='approved')return'approved';if(r.declined)return hasChart(t)?'review':'missing';if(getSource(t).length)return'found';if(hasChart(t))return'review';return'missing'}
 function lacuerdaMatch(t){return getSource(t).find(s=>s.site==='LaCuerda'&&s.sourceCheck?.status==='confirmed')}
-function ultimateGuitarLink(t){return getSource(t).find(s=>s.site==='Ultimate Guitar')}
+function ultimateGuitarLink(t){return getSource(t).find(s=>s.site==='Ultimate Guitar'||/^https:\/\/(?:[^/]+\.)?ultimate-guitar\.com\//i.test(s.url||''))}
 function badge(t){const s=state(t);const found=getSource(t).length;
   return s==='verified'?'<span class="pill v-verified">✔ Recording verified by you'+(verifiedDate(t)?' · '+esc(verifiedDate(t)):'')+'</span>':s==='approved'?'<span class="pill v-reviewed">✓ Approved by you</span>':s==='found'?(lacuerdaMatch(t)?'<span class="pill v-lacuerda">✓ LaCuerda chart located · recording needs review</span>':ultimateGuitarLink(t)?'<span class="pill v-source">↗ Ultimate Guitar tab submitted · needs review</span>':'<span class="pill v-source">↗ Chord source found · review</span>'):s==='review'?'<span class="pill v-reviewed">◷ Chart needs review</span>':'<span class="pill v-missing">? Chords needed</span>'}
 
@@ -298,7 +298,7 @@ function draw(){const t=selected();if(!t)return;const r=entry(t),src=getSource(t
  $('vClose').onclick=close;
  $('vPersonal').onclick=()=>{close();window.WorshipCharts?.open(t.key)};
  if($('vOpenStudy'))$('vOpenStudy').onclick=()=>{close();openStudy(t)};
- $('vSetUrl').onclick=()=>{const raw=$('vManualUrl').value.trim();try{const u=new URL(raw);if(u.protocol!=='https:'||!u.hostname.includes('.'))throw Error();change(t,{url:u.href,site:u.hostname,declined:false,status:'',notes:$('vNotes').value});$('vFeedback').textContent='Custom source saved. Confirm exact recording before verifying.'}catch(_){$('vFeedback').textContent='Enter a complete HTTPS URL to the chord page.'}};
+ $('vSetUrl').onclick=()=>{const raw=$('vManualUrl').value.trim();try{const u=new URL(raw);if(u.protocol!=='https:'||!u.hostname.includes('.'))throw Error();change(t,{url:u.href,site:/(?:^|\.)ultimate-guitar\.com$/i.test(u.hostname)?'Ultimate Guitar':u.hostname,declined:false,status:'',notes:$('vNotes').value});$('vFeedback').textContent='Custom source saved. Confirm exact recording before verifying.'}catch(_){$('vFeedback').textContent='Enter a complete HTTPS URL to the chord page.'}};
  if($('vReject'))$('vReject').onclick=()=>{change(t,{declined:true,status:'',notes:$('vNotes').value})};
  dialog.querySelectorAll('[data-draft]').forEach(btn=>btn.onclick=()=>{const v=src[Number(btn.dataset.draft)];close();window.WorshipCharts?.prefill(t.key,{body:v.preview+'\n\n[Review this against your Spotify recording before performing]',key:v.key,label:'Draft · '+v.site});});
  $('vApprove').onclick=()=>{if(!best&&!hasChart(t)){$('vFeedback').textContent='Please add a chart link or enter your chords before approving.';return;}change(t,{status:'approved',declined:false,notes:$('vNotes').value})};
