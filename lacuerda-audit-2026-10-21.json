@@ -1,14 +1,14 @@
 {
   "title": "Worship Chords — LaCuerda source discovery audit",
   "scannedOn": "2026-10-21",
-  "method": "Published LaCuerda artist/song chord pages located through public web research. Song-level source matches, not verified Spotify performance or a comprehensive proof of no chart.",
+  "method": "Song-level chord pages found in LaCuerda research. A medley or multi-song recording is only matched when the complete track is covered; section-only sources are excluded. The audit does not verify the exact Spotify performance and does not prove that an unmatched chart is absent online.",
   "originalPlaylistCount": 204,
   "additionalSpotifyTracksObserved": 2,
-  "sourceCandidatesAdded": 123,
+  "sourceCandidatesAdded": 121,
   "existingCandidatesUpdated": 0,
   "matchedOriginal": 122,
-  "partialOriginal": 2,
-  "unlocatedOriginal": 80,
+  "partialOriginal": 0,
+  "unlocatedOriginal": 82,
   "recordings": [
     {
       "n": 1,
@@ -601,8 +601,9 @@
       "artist": "Fernel Monroy",
       "album": "Salmodiando en Las Naciones",
       "spotifyTrackId": "1jBLZ5wo6fCSlaBB8AD2xo",
-      "status": "section-only-source",
-      "url": "https://acordes.lacuerda.net/fernel_monroy/asi_como_maria.shtml"
+      "status": "no-complete-lacuerda-medley-chart-located",
+      "url": null,
+      "note": "Source covered only part of this track; excluded because a complete medley chart is required."
     },
     {
       "n": 67,
@@ -1069,8 +1070,9 @@
       "artist": "Juan Carlos Alvarado",
       "album": "Fuego",
       "spotifyTrackId": "5IsqUSeMnxmoEdX9Ooot0r",
-      "status": "section-only-source",
-      "url": "https://acordes.lacuerda.net/juan_carlos_alvarado/jehova_es_mi_guerrero.shtml"
+      "status": "no-complete-lacuerda-medley-chart-located",
+      "url": null,
+      "note": "Source covered only part of this track; excluded because a complete medley chart is required."
     },
     {
       "n": 119,
@@ -1860,5 +1862,6 @@
       "status": "lacuerda-song-chart-located",
       "url": "https://acordes.lacuerda.net/jesus_adrian_romero/con_mi_dios.shtml"
     }
-  ]
+  ],
+  "medleySourcePolicy": "Do not catalog partial medley matches or mark the recording as sourced unless the entire track's medley/cadence is covered by a source. Require exact Spotify recording review before marking performance verified."
 }
