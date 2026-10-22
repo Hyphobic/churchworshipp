@@ -44,3 +44,8 @@
 #vStudyModal .study-caption{font-size:11px;color:#68766e;margin:20px 0 0}
 @media(max-width:520px){#vStudyModal .study-page{padding:18px 13px}#vStudyModal .study-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#vStudyModal .study-step{grid-template-columns:31% 1fr}#vStudyModal .study-meta{gap:5px}#vStudyModal .study-meta span{font-size:10px;padding:10px 5px}}
 @media print{#vStudyModal{position:static;background:white;overflow:visible;padding:0}#vStudyModal .study-toolbar{display:none}#vStudyModal .study-page{box-shadow:none}}
+
+/* Auto-generated sheet actions remain readable on cream paper. */
+#vStudyModal .study-edit{margin:12px 0 2px;border:1px solid #497c70;background:#e1ece6;color:#22695d;border-radius:10px;padding:11px 15px;font:750 13px system-ui,-apple-system,sans-serif;cursor:pointer;max-width:100%;white-space:normal;line-height:1.5;text-align:left}
+#vStudyModal .study-edit:hover{background:#d1e6d9}
+#vReviewModal #vOpenStudy{border-color:#69998e;color:#bde8d7}
