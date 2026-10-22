@@ -1,0 +1,681 @@
+{
+  "name": "Worship Chords — Ultimate Guitar chord-source review queue",
+  "createdOn": "2026-10-21",
+  "provider": "Ultimate Guitar",
+  "note": "All 83 recordings that lacked confirmed complete LaCuerda charts are included as a review queue. No additional Ultimate Guitar tab URLs could be independently validated through the available public index, which did not return accessible indexed tab pages for sampled searches. This does NOT establish that Ultimate Guitar has no charts for the remaining songs. The direct provider search link is available per recording.",
+  "fullMedleyRule": "Only accept medley/cadence sources covering the entire recording; section-only charts do not count.",
+  "statusPolicy": "A source link is not a verified Spotify performance. Owner-supplied URLs remain unverified until its content and full medley scope have been checked.",
+  "count": 83,
+  "submittedUltimateGuitarUrls": 1,
+  "independentlyValidatedAdditionalUltimateGuitarUrls": 0,
+  "ownerSubmittedRecordings": [
+    10
+  ],
+  "recordings": [
+    {
+      "playlistIndex": 10,
+      "title": "Los Carros De Faraón (Popurri)",
+      "artist": "Alabanza Vida Nueva",
+      "spotifyTrackId": "6o2XvvgBlqh8jM6sCDUZGL",
+      "ultimateGuitarStatus": "owner-provided-url-not-independently-accessible",
+      "ownerSubmittedUrl": "https://es.ultimate-guitar.com/tab/6562409",
+      "independentlyReadableFullMedleySource": "https://www.e-chords.com/chords/alabanza-vida-nueva/los-carros-de-faraon-popurri",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Los%20Carros%20De%20Fara%C3%B3n%20(Popurri)"
+    },
+    {
+      "playlistIndex": 11,
+      "title": "El Maestro de Galilea",
+      "artist": "Alex Rodriguez",
+      "spotifyTrackId": "6zLxr6n6tFeqmh2uNmBGGd",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=El%20Maestro%20de%20Galilea"
+    },
+    {
+      "playlistIndex": 12,
+      "title": "Merecedor de Alabanza",
+      "artist": "Alex Rodriguez",
+      "spotifyTrackId": "6x8I8rtoNFAvj70zdvtCQi",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Merecedor%20de%20Alabanza"
+    },
+    {
+      "playlistIndex": 13,
+      "title": "La Sombra de Pedro",
+      "artist": "Angel Rocha Hijo del Rey",
+      "spotifyTrackId": "2yEEFdNhgLxvmtRzWFeTmk",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=La%20Sombra%20de%20Pedro"
+    },
+    {
+      "playlistIndex": 14,
+      "title": "El Es el Poderoso",
+      "artist": "Angel Rocha Hijo del Rey",
+      "spotifyTrackId": "6STwxEyRXJTk6l3Wxhs7SF",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=El%20Es%20el%20Poderoso"
+    },
+    {
+      "playlistIndex": 15,
+      "title": "Ven Espíritu Santo",
+      "artist": "Barak",
+      "spotifyTrackId": "5Zp3GgOitUTntY4l3iXctD",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Ven%20Esp%C3%ADritu%20Santo"
+    },
+    {
+      "playlistIndex": 16,
+      "title": "Yo Quiero Más",
+      "artist": "Billy Bunster",
+      "spotifyTrackId": "1yWMu5oyIbiV6VnwwTC8ma",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Yo%20Quiero%20M%C3%A1s"
+    },
+    {
+      "playlistIndex": 18,
+      "title": "Me Gozaré",
+      "artist": "Billy Bunster",
+      "spotifyTrackId": "3TI7VfaJhFvqovoce7mAB3",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Me%20Gozar%C3%A9"
+    },
+    {
+      "playlistIndex": 21,
+      "title": "Llename (feat. Roberto Orellana)",
+      "artist": "Blest / Roberto Orellana",
+      "spotifyTrackId": "7Gm6i5qqYLfHH8JEW2pUIn",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Llename%20(feat.%20Roberto%20Orellana)"
+    },
+    {
+      "playlistIndex": 22,
+      "title": "Mix Me Gozaré (En Vivo)",
+      "artist": "Ccint Music",
+      "spotifyTrackId": "6CkiXSTjEfQ8ti2DXpLQRh",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Mix%20Me%20Gozar%C3%A9%20(En%20Vivo)"
+    },
+    {
+      "playlistIndex": 23,
+      "title": "Danza De Amor / Tu Me Reivindicarás (En Vivo)",
+      "artist": "Ccint Music",
+      "spotifyTrackId": "1wu4cY10QprLfWvgWCtFOk",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Danza%20De%20Amor%20%2F%20Tu%20Me%20Reivindicar%C3%A1s%20(En%20Vivo)"
+    },
+    {
+      "playlistIndex": 24,
+      "title": "Melodia De Uncion, La Voz De Mi Amado, Libertad (En Vivo)",
+      "artist": "Ccint Music",
+      "spotifyTrackId": "6ruXHsEDuA4Qcq2IMYxU2n",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Melodia%20De%20Uncion%2C%20La%20Voz%20De%20Mi%20Amado%2C%20Libertad%20(En%20Vivo)"
+    },
+    {
+      "playlistIndex": 25,
+      "title": "Pelearan contra el cordero",
+      "artist": "Coro Luz del mundo",
+      "spotifyTrackId": "3wZcf2jE7CPB7DNDG25tLZ",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Pelearan%20contra%20el%20cordero"
+    },
+    {
+      "playlistIndex": 26,
+      "title": "Grandes y maravillosas son tus obras",
+      "artist": "Coro Luz del mundo",
+      "spotifyTrackId": "6jlaUjlT0fVUZftGImU2g1",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Grandes%20y%20maravillosas%20son%20tus%20obras"
+    },
+    {
+      "playlistIndex": 27,
+      "title": "Mi pensamiento eres tu señor",
+      "artist": "Coro Luz del mundo",
+      "spotifyTrackId": "3VB9Q3chclnYVBPMUXMy9u",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Mi%20pensamiento%20eres%20tu%20se%C3%B1or"
+    },
+    {
+      "playlistIndex": 28,
+      "title": "Yo Me Alegré",
+      "artist": "Coro Menap",
+      "spotifyTrackId": "30z6CHwDFfFnmLw9kqhAvv",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Yo%20Me%20Alegr%C3%A9"
+    },
+    {
+      "playlistIndex": 29,
+      "title": "Cuando el Pueblo Alaba a Dios",
+      "artist": "Coro Menap",
+      "spotifyTrackId": "6LtCguSob2Jdc9GJOFEDVC",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Cuando%20el%20Pueblo%20Alaba%20a%20Dios"
+    },
+    {
+      "playlistIndex": 30,
+      "title": "En el Altar de Dios",
+      "artist": "Coro Menap",
+      "spotifyTrackId": "5HATdYQofmEFqOuARuAtu6",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=En%20el%20Altar%20de%20Dios"
+    },
+    {
+      "playlistIndex": 32,
+      "title": "Ven, Espíritu Divino",
+      "artist": "Coro Menap",
+      "spotifyTrackId": "2OpifrEeFZPCS5YHjGZclm",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Ven%2C%20Esp%C3%ADritu%20Divino"
+    },
+    {
+      "playlistIndex": 40,
+      "title": "Salmo 22",
+      "artist": "Dios De Israel",
+      "spotifyTrackId": "5RZE4JuAjNYxbI30m0535p",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Salmo%2022"
+    },
+    {
+      "playlistIndex": 41,
+      "title": "Sube",
+      "artist": "Ebenezer San Francisco",
+      "spotifyTrackId": "6JsTbCLkoAMUi9W7FfI6CL",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Sube"
+    },
+    {
+      "playlistIndex": 42,
+      "title": "Comida Verdadera - En Vivo",
+      "artist": "Ebenezer San Francisco / Jorge Jaenz",
+      "spotifyTrackId": "6GaJDZSuMMZkZiVeBWI62b",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Comida%20Verdadera%20-%20En%20Vivo"
+    },
+    {
+      "playlistIndex": 43,
+      "title": "Viene el Día - En Vivo",
+      "artist": "Ebenezer San Francisco / Jorge Jaenz",
+      "spotifyTrackId": "3qTTWxFhKvynN0F4Zv5O0n",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Viene%20el%20D%C3%ADa%20-%20En%20Vivo"
+    },
+    {
+      "playlistIndex": 44,
+      "title": "Ante el Rey - En Vivo",
+      "artist": "Ebenezer San Francisco / Jorge Jaenz",
+      "spotifyTrackId": "0EvcyJwWiMwnLNLhnzXZSg",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Ante%20el%20Rey%20-%20En%20Vivo"
+    },
+    {
+      "playlistIndex": 45,
+      "title": "No sé por qué",
+      "artist": "Edgar Rocha",
+      "spotifyTrackId": "5hxJMB1dGnZwO8dmIIio5G",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=No%20s%C3%A9%20por%20qu%C3%A9"
+    },
+    {
+      "playlistIndex": 46,
+      "title": "La Bienvenida (Medley) [En Vivo]",
+      "artist": "Elim Adorando",
+      "spotifyTrackId": "1eBF1P4bgbwA4jgeZL2HGj",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=La%20Bienvenida%20(Medley)%20%5BEn%20Vivo%5D"
+    },
+    {
+      "playlistIndex": 47,
+      "title": "El Nombre de Jesús (Medley) [En Vivo]",
+      "artist": "Elim Adorando",
+      "spotifyTrackId": "1kj4q4I18UDsXP1Hriq91K",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=El%20Nombre%20de%20Jes%C3%BAs%20(Medley)%20%5BEn%20Vivo%5D"
+    },
+    {
+      "playlistIndex": 48,
+      "title": "El Grano de Mostaza",
+      "artist": "''El Obama'' Carlos Anderson",
+      "spotifyTrackId": "42ONbP7j05lCPzAeAdFRiI",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=El%20Grano%20de%20Mostaza"
+    },
+    {
+      "playlistIndex": 49,
+      "title": "Cuán Grande Es Dios",
+      "artist": "En Espíritu Y En Verdad / Omar Rodriguez Music",
+      "spotifyTrackId": "0fpW2x6Cd3cBgTGaU8TZKE",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Cu%C3%A1n%20Grande%20Es%20Dios"
+    },
+    {
+      "playlistIndex": 51,
+      "title": "Toda Rodilla",
+      "artist": "Erick Porta / Ministerios Elim",
+      "spotifyTrackId": "18E4jBwk15k088cRwmkL12",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Toda%20Rodilla"
+    },
+    {
+      "playlistIndex": 52,
+      "title": "No Hay Santo Como El Señor",
+      "artist": "Erick Porta / Tony Pérez",
+      "spotifyTrackId": "7qLbAHt4aDPCbY2Livsrka",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=No%20Hay%20Santo%20Como%20El%20Se%C3%B1or"
+    },
+    {
+      "playlistIndex": 58,
+      "title": "Satúrame",
+      "artist": "Ericson Alexander Molano",
+      "spotifyTrackId": "1SBMJ3a4Gi6F3C9YWDRxPs",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Sat%C3%BArame"
+    },
+    {
+      "playlistIndex": 62,
+      "title": "Oye Jehova de Mi Alma Este Cantar",
+      "artist": "Ever zuñiga chinchilla",
+      "spotifyTrackId": "0lE1DzDIRmo4VQKaxLltxU",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Oye%20Jehova%20de%20Mi%20Alma%20Este%20Cantar"
+    },
+    {
+      "playlistIndex": 63,
+      "title": "Tú Me Reivindicarás",
+      "artist": "Familia Barro de Dios",
+      "spotifyTrackId": "4nCIBDQUjomrzlxzlV9WDx",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=T%C3%BA%20Me%20Reivindicar%C3%A1s"
+    },
+    {
+      "playlistIndex": 66,
+      "title": "Así Como María (Becerros de Manada)",
+      "artist": "Fernel Monroy",
+      "spotifyTrackId": "1jBLZ5wo6fCSlaBB8AD2xo",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=As%C3%AD%20Como%20Mar%C3%ADa%20(Becerros%20de%20Manada)"
+    },
+    {
+      "playlistIndex": 71,
+      "title": "Solo Tienes Que Creer",
+      "artist": "Fito Delgado",
+      "spotifyTrackId": "0KmcE0KgBCYARQicFLg06O",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Solo%20Tienes%20Que%20Creer"
+    },
+    {
+      "playlistIndex": 72,
+      "title": "Cristo Vive en Mí",
+      "artist": "Fito Delgado",
+      "spotifyTrackId": "6sOvHfE1YiDvnGru4XbkzF",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Cristo%20Vive%20en%20M%C3%AD"
+    },
+    {
+      "playlistIndex": 73,
+      "title": "El Sacrificio",
+      "artist": "Generacion De Jesus",
+      "spotifyTrackId": "6wdn80BKG5iuAHwjQyHmtD",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=El%20Sacrificio"
+    },
+    {
+      "playlistIndex": 74,
+      "title": "Envisteme de Poder (En Vivo)",
+      "artist": "Grupo Inspiracion",
+      "spotifyTrackId": "3S4qwTWa0EjZojM9cGGyDD",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Envisteme%20de%20Poder%20(En%20Vivo)"
+    },
+    {
+      "playlistIndex": 75,
+      "title": "Anhelo Trabajar Por El señor",
+      "artist": "Héctor Jiménez",
+      "spotifyTrackId": "3BhVu0j1MrTf8n4RSMYQkk",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Anhelo%20Trabajar%20Por%20El%20se%C3%B1or"
+    },
+    {
+      "playlistIndex": 77,
+      "title": "Abrió el Mar",
+      "artist": "Iglesia de Cristo Ebenezer Honduras / Nuestro Legado",
+      "spotifyTrackId": "0tdaxWFQApqOK0LMqc3onL",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Abri%C3%B3%20el%20Mar"
+    },
+    {
+      "playlistIndex": 78,
+      "title": "Así Como David Danzaba",
+      "artist": "Iglesia de Cristo Ebenezer Honduras / Nuestro Legado",
+      "spotifyTrackId": "4WgTEN3UvmfjDGTyazGf7m",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=As%C3%AD%20Como%20David%20Danzaba"
+    },
+    {
+      "playlistIndex": 79,
+      "title": "La Canción Feliz",
+      "artist": "Iglesia de Cristo Ebenezer Honduras / Nuestro Legado",
+      "spotifyTrackId": "4YF1WJIBiy77kpV0JijJQt",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=La%20Canci%C3%B3n%20Feliz"
+    },
+    {
+      "playlistIndex": 80,
+      "title": "Las Riquezas Y La Gloria",
+      "artist": "Iglesia de Cristo Ebenezer Honduras",
+      "spotifyTrackId": "2RXNyM5C6055varfI20tkh",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Las%20Riquezas%20Y%20La%20Gloria"
+    },
+    {
+      "playlistIndex": 81,
+      "title": "Hay una Unción Aquí - En Vivo",
+      "artist": "Iglesia Rey De Reyes & Claudio Freidzon",
+      "spotifyTrackId": "5bZk4IkKm01nZwxeQbjAsn",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Hay%20una%20Unci%C3%B3n%20Aqu%C3%AD%20-%20En%20Vivo"
+    },
+    {
+      "playlistIndex": 82,
+      "title": "Espíritu Santo - En Vivo",
+      "artist": "Iglesia Rey De Reyes & Claudio Freidzon",
+      "spotifyTrackId": "1asAeRZq5bImHn42DhUKZq",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Esp%C3%ADritu%20Santo%20-%20En%20Vivo"
+    },
+    {
+      "playlistIndex": 106,
+      "title": "Enviame a Mi",
+      "artist": "Jesús Adrián Romero",
+      "spotifyTrackId": "2FF17M1eTlWMEWD7odigXh",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Enviame%20a%20Mi"
+    },
+    {
+      "playlistIndex": 111,
+      "title": "Tu Estás Aquí - En Vivo",
+      "artist": "Jesús Adrián Romero / Marcela Gandara",
+      "spotifyTrackId": "3X5KX8EM2lBRs35CL2HMAQ",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Tu%20Est%C3%A1s%20Aqu%C3%AD%20-%20En%20Vivo"
+    },
+    {
+      "playlistIndex": 113,
+      "title": "Esta Cayendo",
+      "artist": "Jose Luis Reyes",
+      "spotifyTrackId": "6XXn8f7bPRT2hP4j5nYbcJ",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Esta%20Cayendo"
+    },
+    {
+      "playlistIndex": 114,
+      "title": "Dios No Nos Trajo Hasta Aquí para Volver Atrás (feat. Juan Carlos Alvarado) [En Vivo]",
+      "artist": "Josué Orozco / Juan Carlos Alvarado",
+      "spotifyTrackId": "3Xm1hNONrqOl5SUjpWVJxr",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Dios%20No%20Nos%20Trajo%20Hasta%20Aqu%C3%AD%20para%20Volver%20Atr%C3%A1s%20(feat.%20Juan%20Carlos%20Alvarado)%20%5BEn%20Vivo%5D"
+    },
+    {
+      "playlistIndex": 118,
+      "title": "Jehová Es Mi Guerrero/Le Llaman (Reprise) - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "spotifyTrackId": "5IsqUSeMnxmoEdX9Ooot0r",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Jehov%C3%A1%20Es%20Mi%20Guerrero%2FLe%20Llaman%20(Reprise)%20-%20En%20Vivo"
+    },
+    {
+      "playlistIndex": 125,
+      "title": "Yo te Amo/Yo te Adoro (Reprise) - En Vivo",
+      "artist": "Juan Carlos Alvarado",
+      "spotifyTrackId": "3pFngxN66TQvIJzhNxK4lW",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Yo%20te%20Amo%2FYo%20te%20Adoro%20(Reprise)%20-%20En%20Vivo"
+    },
+    {
+      "playlistIndex": 132,
+      "title": "Para Danzar (Medley)",
+      "artist": "Juan Carlos Alvarado",
+      "spotifyTrackId": "5DGNZzF8gqthhfaUZPydGW",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Para%20Danzar%20(Medley)"
+    },
+    {
+      "playlistIndex": 135,
+      "title": "Él Es Grande",
+      "artist": "Llamada Final / Inspiración",
+      "spotifyTrackId": "4yUNN6Tk1H4qjWw7ivu05N",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=%C3%89l%20Es%20Grande"
+    },
+    {
+      "playlistIndex": 136,
+      "title": "Mi Corazón Se Regocija En El Señor",
+      "artist": "Llamada Final / Tony Pérez / Inspiración",
+      "spotifyTrackId": "1X33SFqCsMtqbb5L7ELwaD",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Mi%20Coraz%C3%B3n%20Se%20Regocija%20En%20El%20Se%C3%B1or"
+    },
+    {
+      "playlistIndex": 145,
+      "title": "Restaurarás el Santo Lugar",
+      "artist": "Marcos Witt",
+      "spotifyTrackId": "0rWFnAeWSgp0x0XR6v3sXk",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Restaurar%C3%A1s%20el%20Santo%20Lugar"
+    },
+    {
+      "playlistIndex": 146,
+      "title": "Espíritu de Dios",
+      "artist": "Maurilio Suárez y el grupo Méssia",
+      "spotifyTrackId": "6m52bMkPKGYv7RSlo1rUHJ",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Esp%C3%ADritu%20de%20Dios"
+    },
+    {
+      "playlistIndex": 149,
+      "title": "Vino Celestial",
+      "artist": "Miel San Marcos",
+      "spotifyTrackId": "2Idfgbdvy9O1Ii6KpHB3kV",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Vino%20Celestial"
+    },
+    {
+      "playlistIndex": 151,
+      "title": "Viene Ya (En Vivo)",
+      "artist": "Miel San Marcos",
+      "spotifyTrackId": "0ENmylIk4ML9ijKZdhml8T",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Viene%20Ya%20(En%20Vivo)"
+    },
+    {
+      "playlistIndex": 155,
+      "title": "Yo Venceré",
+      "artist": "Miel San Marcos",
+      "spotifyTrackId": "6q8gNL44VMVDo4rx6wF8nC",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Yo%20Vencer%C3%A9"
+    },
+    {
+      "playlistIndex": 168,
+      "title": "Remolineando (feat. Fernel Monroy)",
+      "artist": "Miel San Marcos / Fernel Monroy",
+      "spotifyTrackId": "1NmECxDikubj4Hhu1dbrhl",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Remolineando%20(feat.%20Fernel%20Monroy)"
+    },
+    {
+      "playlistIndex": 171,
+      "title": "Me Gozare",
+      "artist": "Ministerios Ebenezer Guatemala",
+      "spotifyTrackId": "65GmdWPHlOYUlNnK5pOzyH",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Me%20Gozare"
+    },
+    {
+      "playlistIndex": 172,
+      "title": "Quiero Conocerte",
+      "artist": "Ministerios Judà",
+      "spotifyTrackId": "5hdYLd5OQow8mkLBT6K4x3",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Quiero%20Conocerte"
+    },
+    {
+      "playlistIndex": 173,
+      "title": "Danza de Amor",
+      "artist": "Nuestro Legado",
+      "spotifyTrackId": "524NnsSLotss3SGZoDjz5S",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Danza%20de%20Amor"
+    },
+    {
+      "playlistIndex": 174,
+      "title": "Grita Canta y Danza",
+      "artist": "Nuevo Pacto",
+      "spotifyTrackId": "26xSQy8kB4gzDs3W6wOFxz",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Grita%20Canta%20y%20Danza"
+    },
+    {
+      "playlistIndex": 181,
+      "title": "Pon Aceite En Mi Lampara/Saturame Señor/Ven, Ven, Ven - En Vivo",
+      "artist": "Ricardo Rodriguez",
+      "spotifyTrackId": "5jbWcl1pzrfLDMANIrUsA0",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Pon%20Aceite%20En%20Mi%20Lampara%2FSaturame%20Se%C3%B1or%2FVen%2C%20Ven%2C%20Ven%20-%20En%20Vivo"
+    },
+    {
+      "playlistIndex": 182,
+      "title": "Por La Mañana Yo Dirijo Mi Alabanza",
+      "artist": "Ricardo Rodriguez",
+      "spotifyTrackId": "1JYI9aj8wLWLMxXPxcsKoR",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Por%20La%20Ma%C3%B1ana%20Yo%20Dirijo%20Mi%20Alabanza"
+    },
+    {
+      "playlistIndex": 184,
+      "title": "Este Corito",
+      "artist": "Salvador",
+      "spotifyTrackId": "0IK3QfBUomnijyUJQzrVPg",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Este%20Corito"
+    },
+    {
+      "playlistIndex": 185,
+      "title": "Queremos a Cristo Proclamar - En Vivo",
+      "artist": "Santiago Soto y Sus Tejones Band",
+      "spotifyTrackId": "1lcuI2dTld5O1ycqq6AcLp",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Queremos%20a%20Cristo%20Proclamar%20-%20En%20Vivo"
+    },
+    {
+      "playlistIndex": 186,
+      "title": "Jesús",
+      "artist": "Tony Pérez",
+      "spotifyTrackId": "6NLNWoyAfVQHSSUwB7If2l",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Jes%C3%BAs"
+    },
+    {
+      "playlistIndex": 187,
+      "title": "Celebremos",
+      "artist": "Viento Recio",
+      "spotifyTrackId": "4Bkcm0n1K17Vc5Sw2csfZO",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Celebremos"
+    },
+    {
+      "playlistIndex": 190,
+      "title": "Vamos Escalando Peldaños (En Vivo)",
+      "artist": "Virginia Brito",
+      "spotifyTrackId": "2uFwKG35eJAFOQ9lZJ3Eeu",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Vamos%20Escalando%20Pelda%C3%B1os%20(En%20Vivo)"
+    },
+    {
+      "playlistIndex": 191,
+      "title": "YA SE OYE EL SHOFAR",
+      "artist": "VITTORIA MUSIC",
+      "spotifyTrackId": "4y8fqZb6U6JRNeEoFf3EEq",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=YA%20SE%20OYE%20EL%20SHOFAR"
+    },
+    {
+      "playlistIndex": 192,
+      "title": "Huele a Victoria",
+      "artist": "Santiago Torres Jr",
+      "spotifyTrackId": "4ZCJqbSOAgtfaXy28YF8OV",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Huele%20a%20Victoria"
+    },
+    {
+      "playlistIndex": 193,
+      "title": "Poderoso Guerrero (En Vivo)",
+      "artist": "William Salgado / Mahanaim Honduras",
+      "spotifyTrackId": "1ztBdxAdDHT6hH2zwGd4CT",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Poderoso%20Guerrero%20(En%20Vivo)"
+    },
+    {
+      "playlistIndex": 194,
+      "title": "La Voz De Mi Amado (En Vivo)",
+      "artist": "Geovani Canelo / Mahanaim Honduras",
+      "spotifyTrackId": "6BNdGH1fVzktRXnZeCQdnU",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=La%20Voz%20De%20Mi%20Amado%20(En%20Vivo)"
+    },
+    {
+      "playlistIndex": 198,
+      "title": "Medley Clásicos (En Vivo)",
+      "artist": "Ccint Music",
+      "spotifyTrackId": "1n587plcAgby66GxKmQf7f",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Medley%20Cl%C3%A1sicos%20(En%20Vivo)"
+    },
+    {
+      "playlistIndex": 200,
+      "title": "Yo Me Alegré",
+      "artist": "Hannah Ponce / Iglesia de Cristo Ebenezer Honduras / Luis Ponce Jr.",
+      "spotifyTrackId": "2dVAoRvVF6tknX5BZcxtOB",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Yo%20Me%20Alegr%C3%A9"
+    },
+    {
+      "playlistIndex": 201,
+      "title": "El Espíritu Y La Novia",
+      "artist": "Hannah Ponce / Iglesia de Cristo Ebenezer Honduras",
+      "spotifyTrackId": "4vRjlIo48ZsQ7AkDJaKFhj",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=El%20Esp%C3%ADritu%20Y%20La%20Novia"
+    },
+    {
+      "playlistIndex": 202,
+      "title": "Árboles Del Campo",
+      "artist": "Hannah Ponce / Iglesia de Cristo Ebenezer Honduras / Luis Ponce Jr.",
+      "spotifyTrackId": "4xSCnkNlu9AfOlKqTWOyqs",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=%C3%81rboles%20Del%20Campo"
+    },
+    {
+      "playlistIndex": 203,
+      "title": "Toda La Casa",
+      "artist": "Hannah Ponce / Iglesia de Cristo Ebenezer Honduras / Luis Ponce Jr.",
+      "spotifyTrackId": "4oLpxlsat9OMMIhuzNwyFu",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Toda%20La%20Casa"
+    },
+    {
+      "playlistIndex": 204,
+      "title": "Para Ti Oh Jehová",
+      "artist": "Hannah Ponce / Iglesia de Cristo Ebenezer Honduras / Luis Ponce Jr.",
+      "spotifyTrackId": "5rDYu48iWQgzWqARrr7VIr",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Para%20Ti%20Oh%20Jehov%C3%A1"
+    },
+    {
+      "playlistIndex": 205,
+      "title": "Cantaré al Señor Por Siempre",
+      "artist": "Marco Barrientos",
+      "ultimateGuitarStatus": "no-independent-UG-match-confirmed",
+      "searchUrl": "https://www.ultimate-guitar.com/search.php?search_type=title&value=Cantar%C3%A9%20al%20Se%C3%B1or%20Por%20Siempre"
+    }
+  ]
+}
